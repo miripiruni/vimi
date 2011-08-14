@@ -1,0 +1,416 @@
+snippet @c
+	@charset 'utf-8';
+snippet @n
+	@namespace '${1}';
+snippet @i
+	@import url(${1});
+snippet @m
+	@media ${1} {
+		${2}
+		}
+snippet @f
+	@font-face {
+		 font-family:${1};
+		 src:local(${2}), url($3}) format(${4});
+		 }
+snippet @f+
+	@font-face {
+		 font-family:${1};
+		 src:url(${2}.eot);
+		 src:;
+			 url(${3}.eot?iefix) format('eot'),
+			 url(${4}.woff) format('woff'),
+			 url(${5}.ttf) format('truetype'),
+			 url(${6}.svg#) format('svg');
+		 }
+snippet @p
+	@page ${1} {
+		${2}
+		}
+snippet @v
+	@viewport ${1} {
+		${2}
+		}
+snippet !
+	!important
+snippet exp
+	expression(${1})
+snippet \
+	.${1:b-} {
+		${2}
+		}
+snippet rgb
+	rgb(${1:0}, ${2:0}, ${3:0})
+snippet rgba
+	rgba(${1:0}, ${2:0}, ${3:0}, ${4:1})
+snippet hsl
+	hsl(${1:0}, ${2:0}, ${3:0})
+snippet hsla
+	hsla(${1:0}, ${2:0}, ${3:0}, ${4:1})
+snippet poa
+	position:absolute;
+snippet pof
+	position:fixed;
+snippet por
+	position:relative;
+snippet pos
+	position:static;
+snippet z
+	z-index:${1};${2}
+snippet t
+	top:${1};${2}
+snippet r
+	right:${1};${2}
+snippet bo
+	bottom:${1};${2}
+snippet l
+	left:${1};${2}
+snippet fl
+	float:left;
+snippet fr
+	float:right;
+snippet fn
+	float:none;
+snippet cl
+	clear:left;
+snippet cr
+	clear:right;
+snippet cn
+	clear:none;
+snippet cb
+	clear:both;
+snippet db
+	display:block;
+snippet di
+	display:inline;
+snippet dn
+	display:none;
+snippet dib
+	display:-moz-inline-block;
+	display:inline-block;
+snippet dt
+	display:table;
+snippet dtc
+	display:table-cell;
+snippet dtr
+	display:table-row;
+snippet dli
+	display:list-item;
+snippet dit
+	display:inline-table;
+snippet vh
+	visibility:hidden;
+snippet vv
+	visibility:visible;
+snippet vc
+	visibility:collapse;
+snippet oa
+	overflow:auto;
+snippet oh
+	overflow:hidden;
+snippet oi
+	overflow:inherit;
+snippet os
+	overflow:scroll;
+snippet ov}
+	overflow:visible;
+snippet oxa
+	overflow-x:auto;
+snippet oxh
+	overflow-x:hidden;
+snippet oxi
+	overflow-x:inherit;
+snippet oxs
+	overflow-x:scroll;
+snippet oxv
+	overflow-x:visible;
+snippet oya
+	overflow-y:auto;
+snippet oyh
+	overflow-y:hidden;
+snippet oyi
+	overflow-y:inherit;
+snippet oys
+	overflow-y:scroll;
+snippet oyv
+	overflow-y:visible;
+snippet cp
+	clip:rect(${1:0 0 0 0});
+snippet sb
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+snippet bsc
+	-webkit-box-sizing:content-box;
+	-moz-box-sizing:content-box;
+	box-sizing:content-box;
+snippet m
+	margin:${1};${2}
+snippet mt
+	margin-top:${1};${2}
+snippet mr
+	margin-right:${1};${2}
+snippet mb
+	margin-bottom:${1};${2}
+snippet ml
+	margin-left:${1};${2}
+snippet p
+	padding:${1};${2}
+snippet pt
+	padding-top:${1};${2}
+snippet pr
+	padding-right:${1};${2}
+snippet pb
+	padding-bottom:${1};${2}
+snippet pl
+	padding-left:${1};${2}
+snippet miw
+	min-width:${1};${2}
+snippet mih
+	min-height:${1};${2}
+snippet maw
+	max-width:${1};${2}
+snippet mah
+	max-height:${1};${2}
+snippet w
+	width:${1};${2}
+snippet w1
+	width:100%;
+snippet wa
+	width:auto;
+snippet h
+	height:${1};${2}
+snippet h1
+	height:100%;
+snippet o
+	outline:1px solid ${1};${2}
+snippet b
+	border:1px solid ${1};${2}
+snippet bc
+	border-color:${1};${2}
+snippet bs
+	border-style:${1};${2}
+snippet bw
+	border-width:${1};${2}
+snippet bt
+	border-top:1px solid ${1};${2}
+snippet btc
+	border-top-color:${1};${2}
+snippet bts
+	border-top-style:${1};${2}
+snippet btw
+	border-top-width:${1};${2}
+snippet br
+	border-right:1px solid ${1};${2}
+snippet brc
+	border-right-color:${1};${2}
+snippet brs
+	border-right-style:${1};${2}
+snippet brw
+	border-right-width:${1};${2}
+snippet bb
+	border-bottom:1px solid ${1};${2}
+snippet bbc
+	border-bottom-color:${1};${2}
+snippet bbs
+	border-bottom-style:${1};${2}
+snippet bbw
+	border-bottom-width:${1};${2}
+snippet bl
+	border-left:1px solid ${1};${2}
+snippet blc
+	border-left-color:${1};${2}
+snippet bls
+	border-left-style:${1};${2}
+snippet blw
+	border-left-width:${1};${2}
+snippet bor
+	-moz-border-radius:$1;
+	-webkit-border-radius:$1;
+	-khtml-border-radius:$1;
+	border-radius:${1:};${2}
+snippet bdi
+	-webkit-border-image:url($1) $2;
+	-moz-border-image:url($1) $2;
+	-o-border-image:url($1) $2;
+	border-image:url(${1:}) ${2:};${3}
+snippet bdisl
+	border-image-slice:${1:fill/0/0 0/0 0 0/0 0 0 0};${2}
+snippet bdiw
+	border-image-width:${1:0/0 0/0 0 0/0 0 0 0};${2}
+snippet bdio
+	border-image-outset:${1:0/0 0/0 0 0/0 0 0 0};${2}
+snippet bdir
+	border-image-repeat:${1:stretch/repeat/round/space};${2}
+snippet ba
+	background:${1};${2}
+snippet ban
+	background:none;
+snippet bau
+	background:${1:red} url(//${2:yandex.st/}) no-repeat ${3:top left};${4}
+snippet bac
+	background-color:${1};${2}
+snippet bact
+	background-color:transparent;
+snippet bai
+	background-image:url(//${1:yandex.st/});${2}
+snippet bain
+	background-image:none;
+snippet bap
+	background-position:${1};${2};
+snippet barn
+	background-repeat:none;
+snippet barr
+	background-repeat:repeat;
+snippet barx
+	background-repeat:repeat-x;
+snippet bary
+	background-repeat:repeat-y;
+snippet baaf
+	background-attachment:fixed;
+snippet baas
+	background-attachment:scroll;
+snippet bao
+	background-origin:${1:padding-box/border-box/content-box};${2}
+snippet bas
+	background-size:${1:auto/contain/cover};${2}
+snippet fi
+	filter:filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=http://${1:yandex.st/});${2}
+snippet fic
+	filter:filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=http://${1:yandex.st/},method=crop);${2}
+snippet fis
+	filter:filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=http://${1:yandex.st/},method=scale);${2}
+snippet bagr
+	background:#${1:bottom-color}; /* Old browsers */
+	background:-moz-linear-gradient(top, $1 0%, ${2:bottom-color} 100%); /* FF3.6+ */
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,$1), color-stop(100%,$2)); /* Chrome,Safari4+ */
+	background:-webkit-linear-gradient(top, $1} 0%,$2 100%); /* Chrome10+,Safari5.1+ */
+	background:-o-linear-gradient(top, $1 0%,$2 100%); /* Opera11.10+ */
+	background:-ms-linear-gradient(top, $1 0%,$2 100%); /* IE10+ */
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='$1', endColorstr='$2',GradientType=0 ); /* IE6-9 */
+	background:linear-gradient(top, $1 0%,$2 100%); /* W3C */${3}
+snippet bxs
+	-webkit-box-shadow:$1;
+	-moz-box-shadow:$1;
+	box-shadow:${1:};${2}
+snippet c
+	color:${1};${2}
+snippet tlf
+	table-layout:fixed;
+snippet tla
+	table-layout:auto;
+snippet ecs
+	empty-cells:show;
+snippet ech
+	empty-cells:hide;
+snippet bos
+	border-spacing:0;
+snippet bcc
+	border-collapse:collapse;
+snippet bcs
+	border-collapse:separate;
+snippet ls
+	list-style:${1};${2}
+snippet lsn
+	list-style:none;
+snippet co
+	content:${1};${2}
+snippet cor
+	counter-reset:${1};${2}
+snippet coi
+	counter-increment:${1};${2}
+snippet tal
+	text-align:left;
+snippet tar
+	text-align:right;
+snippet tac
+	text-align:center;
+snippet taj
+	text-align:justify;
+snippet vat
+	vertical-align:top;
+snippet vab
+	vertical-align:bottom;
+snippet vam
+	vertical-align:middle;
+snippet lh
+	line-height:${1};${2}
+snippet ws
+	white-space:${1};${2}
+snippet wsn
+	white-space:nowrap;
+snippet wsp
+	white-space:pre;
+snippet td
+	text-decoration:${1};${2}
+snippet tdn
+	text-decoration:none;
+snippet tdu
+	text-decoration:underline;
+snippet ti
+	text-indent:${1};${2}
+snippet ttn
+	text-transform:none;
+snippet ttu
+	text-transform:uppercase;
+snippet ttl
+	text-transform:lowercase;
+snippet ttc
+	text-transform:capitalize;
+snippet les
+	letter-spacing:${1};${2}
+snippet wos
+	word-spacing:${1};${2}
+snippet txsh
+	text-shadow:${1:0 0 0 #000};${2}
+snippet f
+	font:${1};${2}
+snippet fa
+	font:100% Arial, sans-serif;
+snippet fv
+	font:80% Verdana, sans-serif;
+snippet ff
+	font-family:${1};${2}
+snippet ffa
+	font-family:Arial, sans-serif;
+snippet fs
+	font-size:${1};${2}
+snippet fwb
+	font-weight:bold;
+snippet fwn
+	font-weight:normal;
+snippet fsi
+	font-style:italic;
+snippet fsn
+	font-style:normal;
+snippet fvn
+	font-variant:normal;
+snippet fvs
+	font-variant:small-caps;
+snippet op
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=${1:});
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=$1)';
+	opacity:${3};${4}
+snippet rz
+	resize:${1:none/both/horisontal/vertical}
+snippet cu
+	cursor:${1};${2}
+snippet cuh
+	cursor:hand;
+snippet cup
+	cursor:pointer;
+snippet cut
+	cursor:text;
+snippet tr
+	-webkit-transition:all linear 1s;
+	-moz-transition:all linear 1s;
+	-o-transition:all linear 1s;
+	transition:all linear 1s;
+snippet tf
+	-webkit-transform:$1;
+	-moz-transform:$1;
+	-ms-transform:$1;
+	-o-transform:$1;
+	transform:${1:translate(0, 0)/translateX(0)/translateY(0)/scale(0)/scaleX(0)/scaleY(0)/rotate(45deg)/skew(45deg)/skewX(45deg)/skewY(45deg)/matrix(0, 0, 0, 0, 0, 0)};${2}
+snippet z1
+	zoom:1;

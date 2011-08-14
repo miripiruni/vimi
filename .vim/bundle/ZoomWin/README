@@ -1,0 +1,31 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=508
+
+Note: version 23 or later of ZoomWin requires vim 7.2 or later
+
+Usage:
+
+    Press <c-w>o : the current window zooms into a full screen
+    Press <c-w>o again: the previous set of windows is restored
+
+Features:
+
+The idea is to make it easy to zoom into and out of a window.  ZoomWin supports normal windows, and it now also supports scratch-windows, no-name windows, and modified-buffer windows.
+
+ * ZoomWin is a 7.2 plugin (as of v23)
+
+ * Files are made hidden during zoom-in and restored upon zoom-out
+
+ * All windows' file contents will be restored during zoomouts. 
+
+ * ZoomWin will clean up any temporary files it generates upon exit.
+ 
+ * Session files are guaranteed to be unique to each vim session, so multiple vims can use zoom-in/out without interfering with one another
+
+A later version may be available at http://mysite.verizon.net/astronaut/vim/index.html#ZOOMWIN .
+
+When zooming in, ZoomWin's window is full sized, with no loss of screen space to status lines for other windows, unlike vimscript#1280 (ToggleOnly), for those vims compiled with the +mksession feature.  For those vims without that feature, v21 ZoomWin now supports partial-zoom-in (leaves a status line behind for each window).
+
+History:
+
+Ron Aaron came up with the original ZoomWin and gave permission to have it posted.
+

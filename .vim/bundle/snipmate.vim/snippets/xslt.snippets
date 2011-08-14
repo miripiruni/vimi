@@ -1,0 +1,81 @@
+snippet in
+	<xsl:include href="${1}"/>
+snippet im
+	<xsl:import href="${1}"/>
+snippet ai
+	<xsl:apply-imports/>
+snippet an
+	<xsl:attribute name="${1}">${2}</xsl:attribute>
+snippet at
+	<xsl:apply-templates/>
+snippet ats
+	<xsl:apply-templates select="${1}"/>
+snippet atsm
+	<xsl:apply-templates select="${1}" mode="${2}"/>
+snippet cos
+	<xsl:copy-of select="${1}"/>
+snippet ctn
+	<xsl:call-template name="${1}"/>
+snippet ctnwp
+	<xsl:call-template name="${1}">
+		<xsl:with-param name="${2}" select="${3}"/>
+	</xsl:call-template>
+snippet cwt
+	<xsl:choose>
+		<xsl:when test="${1}">
+			${2}
+		</xsl:when>
+	</xsl:choose>
+snippet cwto
+	<xsl:choose>
+		<xsl:when test="${1}">
+			${2}
+		</xsl:when>
+		<xsl:otherwise>
+			${3}
+		</xsl:otherwise>
+	</xsl:choose>
+snippet en
+	<xsl:element name="${1}">${2}</xsl:element>
+snippet fe
+	<xsl:for-each select="${1}">
+		${2}
+	</xsl:for-each>
+snippet it
+	<xsl:if test="${1}">
+		${2}
+	</xsl:if>
+snippet kn
+	<xsl:key name="${1}" match="${2}" use="${3}"/>
+snippet o
+	<xsl:otherwise>
+		${1}
+	</xsl:otherwise>
+snippet pn
+	<xsl:param name="${1}"/>
+snippet tm
+	<xsl:template match="${1}">
+		${2}
+	</xsl:template>
+snippet tmm
+	<xsl:template match="${1}" mode="${2}">
+		${3}
+	</xsl:template>
+snippet tn
+	<xsl:template name="${1}">
+		${2}
+	</xsl:template>
+snippet t
+	<xsl:text>${1}</xsl:text>
+snippet vn
+	<xsl:variable name="${1}">${2}</xsl:variable>
+snippet vns
+	<xsl:variable name="${1}" select="${2}"/>
+snippet vos
+	<xsl:value-of select="${1}"/>
+snippet wp
+	<xsl:with-param name="${1}" select="${2}"/>
+snippet wpn
+	<xsl:with-param name="${1}" select="${2}"/>
+snippet wt
+	<xsl:when test="${1}">${2}</xsl:when>

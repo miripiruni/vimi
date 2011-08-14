@@ -8,6 +8,13 @@ How to
 
 Я предпочитаю использовать MacVim в режиме fullscreen. Пока .vimrc обкатывался только на нем.
 
+Install
+-------
+
+1. Удалите или переместите текущие ~/.vim и ~/.vimrc если они есть
+2. Выполните 'cd ~; git clone git@github.com:miripiruni/vimi.git vimi; cp vimi/.vimrc .vimrc; cp -r vimi/.vim .vim'
+
+
 Hot keys
 --------
 

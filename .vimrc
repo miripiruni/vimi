@@ -331,7 +331,8 @@ let mapleader = "," " мапим кнопку <Leader> на запятую. По
     "nmap <C-S-Tab> gT
 
     nmap <C-S-tab> :tabprevious<CR>
-    nmap <C-tab> :tabnext<CR> map <C-S-tab> :tabprevious<CR>
+    nmap <C-tab> :tabnext<CR>
+    map <C-S-tab> :tabprevious<CR>
     map <C-tab> :tabnext<CR>
     imap <C-S-tab> <Esc>:tabprevious<CR>i
     imap <C-tab> <Esc>:tabnext<CR>i

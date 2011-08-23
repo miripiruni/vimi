@@ -318,6 +318,8 @@ let mapleader = "," " мапим кнопку <Leader> на запятую. По
     nmap <D-]> >>
     vmap <D-[> <gv
     vmap <D-]> >gv
+    imap <D-[> <c-o><<
+    imap <D-]> <c-o>>>
 " }
 
 cmap w!! %!sudo tee > /dev/null % " save file with root permissions
@@ -387,7 +389,9 @@ call pathogen#runtime_append_all_bundles() " Сначала запускаем �
 
 " NERDCommenter {
     " IDEA-like and TextMate-like comment shortcuts
-    nmap <D-/> <Leader>c<space> " toggle line commenting
+    nmap <D-/> <Leader>c<space>
     vmap <D-/> <Leader>cc
+    imap <D-/> <c-o><plug>NERDCommenterToggle
 " }
+
 

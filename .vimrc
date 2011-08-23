@@ -343,6 +343,9 @@ cmap w!! %!sudo tee > /dev/null % " save file with root permissions
     map <C-F11> :call ToogleRelativeNumber()<cr>
 " }
 
+" <Space> = <PageDown> Как в браузерах {
+    nmap <Space> <PageDown>
+" }
 
 
 

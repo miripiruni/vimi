@@ -53,6 +53,8 @@ Hot keys
 
 **Tab** - следующая таба (как в браузерах)
 
+**Space** – пролистнуть на страницу вниз (как в браузерах)
+
 **Shift-Tab** - предыдущая таба
 
 Key mapping for textmate-like indentation:

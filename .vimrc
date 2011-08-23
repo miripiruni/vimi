@@ -96,11 +96,11 @@ set wrap            " Включаем перенос строк (http://vimcast
 set linebreak       " Перенос не разрывая слов
 set autoindent      " Копирует отступ от предыдущей строки
 set smartindent     " Включаем 'умную' автоматическую расстановку отступов
-set expandtab
+set expandtab       " В Insert mode при вставке таба преобразует его в соответствующее количество пробелов
 set shiftwidth=4    " Размер сдвига при нажатии на клавиши << и >>
 set tabstop=4       " Размер табуляции
-set softtabstop=4
-set linespace=1     " add some line space for easy reading
+set softtabstop=4   " see man, коротко не описать
+set linespace=1     " line-height
 
 set history=1000 " store lots of :cmdline history
 
@@ -191,6 +191,21 @@ set guioptions-=e " Отключаем графические табы (текс
 
 set formatoptions-=o "dont continue comments when pushing o/O
 
+cmap w!! %!sudo tee > /dev/null % " save file with root permissions
+
+" Go to last file(s) if invoked without arguments {
+    " http://vim.wikia.com/wiki/Open_the_last_edited_file
+    autocmd VimLeave * nested if (!isdirectory($HOME . "/.vim")) |
+        \ call mkdir($HOME . "/.vim") |
+        \ endif |
+        \ execute "mksession! " . $HOME . "/.vim/Session.vim"
+
+    autocmd VimEnter * nested if argc() == 0 && filereadable($HOME . "/.vim/Session.vim") |
+        \ execute "source " . $HOME . "/.vim/Session.vim"
+" }
+
+
+
 
 
 " ===================================================================
@@ -254,18 +269,21 @@ let mapleader = "," " мапим кнопку <Leader> на запятую. По
 " }
 
 " Перемещение строк {
-    " переместить одну строку
-    "nmap <D-S-Up> ddkP
-    nmap <D-S-k> ddkP
-    "nmap <D-S-Down> ddp
-    nmap <D-S-j> ddp
+    " http://vimcasts.org/episodes/bubbling-text/
 
-    " переместить несколько выделенных строк http://www.vim.org/scripts/script.php?script_id=1590 the best {
-    "vmap <D-S-Up> xkP'[V']
-    vmap <D-S-k> xkP'[V']
-    "vmap <D-S-Down> xp'[V']
-    vmap <D-S-j> xp'[V']
+    " переместить одну строку
+    nmap <C-S-k> ddkP
+    nmap <C-S-j> ddp
+
+    " переместить несколько выделенных строк 
+    vmap <C-S-k> xkP'[V']
+    vmap <C-S-j> xp'[V']
 " }
+
+" Visually select the text that was last edited/pasted {
+    nmap gV `[v`]
+" }
+
 
 " Мапим {действие} от курсора до конца строки {
     nnoremap Y y$ " yank
@@ -308,9 +326,17 @@ let mapleader = "," " мапим кнопку <Leader> на запятую. По
     nmap <silent> <C-w> :bdelete<CR>
 " }
 
-" key mapping for tab navigation {
-    nmap <Tab> gt
-    nmap <S-Tab> gT
+" key mapping for Ctrl+Tab navigation {
+    "nmap <C-Tab> gt
+    "nmap <C-S-Tab> gT
+
+    nmap <C-S-tab> :tabprevious<CR>
+    nmap <C-tab> :tabnext<CR> map <C-S-tab> :tabprevious<CR>
+    map <C-tab> :tabnext<CR>
+    imap <C-S-tab> <Esc>:tabprevious<CR>i
+    imap <C-tab> <Esc>:tabnext<CR>i
+    nmap <C-t> :tabnew<CR>
+    imap <C-t> <Esc>:tabnew<CR>
 " }
 
 "Key mapping for textmate-like indentation {
@@ -322,7 +348,6 @@ let mapleader = "," " мапим кнопку <Leader> на запятую. По
     imap <D-]> <c-o>>>
 " }
 
-cmap w!! %!sudo tee > /dev/null % " save file with root permissions
 
 " <C-F11> {
     " Toggle line numbers type http://stackoverflow.com/questions/4387210/vim-how-to-map-two-tasks-under-one-shortcut-key

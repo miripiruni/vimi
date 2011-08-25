@@ -96,11 +96,11 @@ set wrap            " Включаем перенос строк (http://vimcast
 set linebreak       " Перенос не разрывая слов
 set autoindent      " Копирует отступ от предыдущей строки
 set smartindent     " Включаем 'умную' автоматическую расстановку отступов
-set expandtab       " В Insert mode при вставке таба преобразует его в соответствующее количество пробелов
+set expandtab
 set shiftwidth=4    " Размер сдвига при нажатии на клавиши << и >>
 set tabstop=4       " Размер табуляции
-set softtabstop=4   " see man, коротко не описать
-set linespace=1     " line-height
+set softtabstop=4
+set linespace=1     " add some line space for easy reading
 
 set history=1000 " store lots of :cmdline history
 
@@ -191,21 +191,6 @@ set guioptions-=e " Отключаем графические табы (текс
 
 set formatoptions-=o "dont continue comments when pushing o/O
 
-cmap w!! %!sudo tee > /dev/null % " save file with root permissions
-
-" Go to last file(s) if invoked without arguments {
-    " http://vim.wikia.com/wiki/Open_the_last_edited_file
-    autocmd VimLeave * nested if (!isdirectory($HOME . "/.vim")) |
-        \ call mkdir($HOME . "/.vim") |
-        \ endif |
-        \ execute "mksession! " . $HOME . "/.vim/Session.vim"
-
-    autocmd VimEnter * nested if argc() == 0 && filereadable($HOME . "/.vim/Session.vim") |
-        \ execute "source " . $HOME . "/.vim/Session.vim"
-" }
-
-
-
 
 
 " ===================================================================
@@ -249,10 +234,10 @@ let mapleader = "," " мапим кнопку <Leader> на запятую. По
     vnoremap > >gv
 " }
 
-" ,v {
+" <F3> {
     " Вставлять код извне без этой строчки проблематично, без нее начитается
     " бешеный реформат кода
-    set pastetoggle=<leader>v
+    set pastetoggle=<F3>
 " }
 
 " <F2> {
@@ -263,27 +248,45 @@ let mapleader = "," " мапим кнопку <Leader> на запятую. По
 " }
 
 " <F4> {
+    " Toggle line numbers type http://stackoverflow.com/questions/4387210/vim-how-to-map-two-tasks-under-one-shortcut-key
+    let g:relativenumber = 0
+    function! ToogleRelativeNumber()
+      if g:relativenumber == 0
+        let g:relativenumber = 1
+        set norelativenumber
+        set number
+      elseif g:relativenumber == 1
+        let g:relativenumber = 2
+        set nonumber
+        set relativenumber
+      else
+        let g:relativenumber = 0
+        set nonumber
+        set norelativenumber
+      endif
+    endfunction
+    map <F4> :call ToogleRelativeNumber()<cr>
+" }
+
+" ,f {
     " Fast grep
     " грепает в текущей директории по слову, на котором стоит курсор
-    map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR> 
+    map <Leader>f :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR> 
 " }
 
 " Перемещение строк {
-    " http://vimcasts.org/episodes/bubbling-text/
-
     " переместить одну строку
-    nmap <C-S-k> ddkP
-    nmap <C-S-j> ddp
+    "nmap <D-S-Up> ddkP
+    nmap <D-S-k> ddkP
+    "nmap <D-S-Down> ddp
+    nmap <D-S-j> ddp
 
-    " переместить несколько выделенных строк 
-    vmap <C-S-k> xkP'[V']
-    vmap <C-S-j> xp'[V']
+    " переместить несколько выделенных строк http://www.vim.org/scripts/script.php?script_id=1590 the best {
+    "vmap <D-S-Up> xkP'[V']
+    vmap <D-S-k> xkP'[V']
+    "vmap <D-S-Down> xp'[V']
+    vmap <D-S-j> xp'[V']
 " }
-
-" Visually select the text that was last edited/pasted {
-    nmap gV `[v`]
-" }
-
 
 " Мапим {действие} от курсора до конца строки {
     nnoremap Y y$ " yank
@@ -326,18 +329,9 @@ let mapleader = "," " мапим кнопку <Leader> на запятую. По
     nmap <silent> <C-w> :bdelete<CR>
 " }
 
-" key mapping for Ctrl+Tab navigation {
-    "nmap <C-Tab> gt
-    "nmap <C-S-Tab> gT
-
-    nmap <C-S-tab> :tabprevious<CR>
-    nmap <C-tab> :tabnext<CR>
-    map <C-S-tab> :tabprevious<CR>
-    map <C-tab> :tabnext<CR>
-    imap <C-S-tab> <Esc>:tabprevious<CR>i
-    imap <C-tab> <Esc>:tabnext<CR>i
-    nmap <C-t> :tabnew<CR>
-    imap <C-t> <Esc>:tabnew<CR>
+" key mapping for tab navigation {
+    nmap <Tab> gt
+    nmap <S-Tab> gT
 " }
 
 "Key mapping for textmate-like indentation {
@@ -349,31 +343,13 @@ let mapleader = "," " мапим кнопку <Leader> на запятую. По
     imap <D-]> <c-o>>>
 " }
 
-
-" <C-F11> {
-    " Toggle line numbers type http://stackoverflow.com/questions/4387210/vim-how-to-map-two-tasks-under-one-shortcut-key
-    let g:relativenumber = 0
-    function! ToogleRelativeNumber()
-      if g:relativenumber == 0
-        let g:relativenumber = 1
-        set norelativenumber
-        set number
-      elseif g:relativenumber == 1
-        let g:relativenumber = 2
-        set nonumber
-        set relativenumber
-      else
-        let g:relativenumber = 0
-        set nonumber
-        set norelativenumber
-      endif
-    endfunction
-    map <C-F11> :call ToogleRelativeNumber()<cr>
-" }
+cmap w!! %!sudo tee > /dev/null % " save file with root permissions
 
 " <Space> = <PageDown> Как в браузерах {
     nmap <Space> <PageDown>
 " }
+
+
 
 
 
@@ -411,6 +387,8 @@ call pathogen#runtime_append_all_bundles() " Сначала запускаем �
     let NERDTreeQuitOnOpen=1
     let NERDTreeShowHidden=1
     let NERDTreeKeepTreeInNewTab=1
+    let NERDTreeMinimalUI=1 " Disables display of the 'Bookmarks' label and 'Press ? for help' text.
+    let NERDTreeDirArrows=1 " Tells the NERD tree to use arrows instead of + ~ chars when displaying directories.
 " }
 
 " NERDCommenter {

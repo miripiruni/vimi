@@ -357,8 +357,7 @@ cmap w!! %!sudo tee > /dev/null % " save file with root permissions
 " Плагины
 " ===================================================================
 
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles() " Сначала запускаем бандл, а затем настраиваем плагины
+call pathogen#infect() " Сначала запускаем бандл, а затем настраиваем плагины
 
 " Solarized {
     set t_Co=16

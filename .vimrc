@@ -358,8 +358,6 @@ let mapleader = "," " мапим кнопку <Leader> на запятую. По
     imap <D-]> <c-o>>>
 " }
 
-cmap w!! %!sudo tee > /dev/null % " save file with root permissions
-
 " <Space> = <PageDown> Как в браузерах {
     nmap <Space> <PageDown>
 " }

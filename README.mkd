@@ -40,6 +40,7 @@ Hot keys
 `,n` тогглит NERDTree
 
 Перемещение строк:
+
 * `Ctrl-Shift-k` вверх
 * `Ctrl-Shift-j` вниз
 
@@ -68,6 +69,7 @@ Hot keys
 `Space` – пролистнуть на страницу вниз (как в браузерах)
 
 Key mapping for textmate-like indentation:
+
 * `Cmd-[` увеличить
 * `Cmd-]` уменьшить
 

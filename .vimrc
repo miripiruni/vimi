@@ -191,6 +191,21 @@ set guioptions-=e " Отключаем графические табы (текс
 
 set formatoptions-=o "dont continue comments when pushing o/O
 
+cmap w!! %!sudo tee > /dev/null % " save file with root permissions"
+
+" Go to last file(s) if invoked without arguments {
+    " http://vimcastsim.wikia.com/wiki/Open_the_last_edited_file
+    autocmd VimLeave * nested if (!isdirectory($HOME . "/.vim")) |
+        \ call mkdir($HOME . "/.vim") |
+        \ endif |
+        \ execute "mksession! " . $HOME . "/.vim/Session.vim"
+
+    autocmd VimEnter * nested if argc() == 0 && filereadable($HOME . "/.vim/Session.vim") |
+        \ execute "source " . $HOME . "/.vim/Session.vim"
+" }
+
+
+
 
 
 " ===================================================================

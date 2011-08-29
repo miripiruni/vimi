@@ -204,6 +204,8 @@ cmap w!! %!sudo tee > /dev/null % " save file with root permissions"
         \ execute "source " . $HOME . "/.vim/Session.vim"
 " }
 
+let loaded_matchparen = 1 " Не показывать парную скобку. Вим перестает прыгать
+                          " парную скобку показывая где она +100 к скокости :)
 
 
 

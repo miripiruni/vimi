@@ -207,7 +207,7 @@ cmap w!! %!sudo tee > /dev/null % " save file with root permissions"
 
 let loaded_matchparen = 1 " Не показывать парную скобку. Вим перестает прыгать
                           " парную скобку показывая где она +100 к скокости :)
-
+set noshowmatch " Не показывать парные <> в HTML
 
 
 
@@ -295,15 +295,15 @@ let mapleader = "," " мапим кнопку <Leader> на запятую. По
 " Перемещение строк {
     " переместить одну строку
     "nmap <D-S-Up> ddkP
-    nmap <D-S-k> ddkP
+    nmap <C-S-k> ddkP
     "nmap <D-S-Down> ddp
-    nmap <D-S-j> ddp
+    nmap <C-S-j> ddp
 
     " переместить несколько выделенных строк http://www.vim.org/scripts/script.php?script_id=1590 the best {
     "vmap <D-S-Up> xkP'[V']
-    vmap <D-S-k> xkP'[V']
+    vmap <C-S-k> xkP'[V']
     "vmap <D-S-Down> xp'[V']
-    vmap <D-S-j> xp'[V']
+    vmap <C-S-j> xp'[V']
 " }
 
 " Мапим {действие} от курсора до конца строки {
@@ -412,5 +412,3 @@ call pathogen#infect() " Сначала запускаем бандл, а зат
     vmap <D-/> <Leader>cc
     imap <D-/> <c-o><plug>NERDCommenterToggle
 " }
-
-

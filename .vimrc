@@ -153,8 +153,8 @@ set history=1000 " store lots of :cmdline history
     endif
 " }
 
-set splitbelow " текущее будет ниже нового при :sp
-set splitright " текущее окно будет правее нового при :vsp
+set splitbelow " новый сплит будет ниже текущего :sp
+set splitright " новый сплит будет правее текущего :vsp
 
 " AutoReload .vimrc {
     " from http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/

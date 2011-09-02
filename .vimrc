@@ -398,7 +398,7 @@ call pathogen#infect() " Сначала запускаем бандл, а зат
 " NERDTree {
     nmap <leader>n :NERDTreeToggle<CR>
     let NERDTreeShowBookmarks=1
-    let NERDTreeChDirMode=0
+    let NERDTreeChDirMode=2 " Всегда открывать в NERDTree текущую директорию
     let NERDTreeQuitOnOpen=1
     let NERDTreeShowHidden=1
     let NERDTreeKeepTreeInNewTab=1

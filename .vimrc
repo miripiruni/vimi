@@ -167,8 +167,9 @@ set splitright " новый сплит будет правее текущего 
 set cursorline     " Подсветка строки, в которой находится в данный момент курсор
 set guicursor=     " Отключаем мигание курсора
 set gcr=n:blinkon0 " Отключаем мигание курсора в MacVim. Больше никакого стресса.
-set guioptions-=T  " Отключаем панель инструментов
-set guioptions-=e  " Отключаем графические табы (текстовые занимают меньше места)
+"set guioptions-=T  " Отключаем панель инструментов
+"set guioptions+=e  " Отключаем графические табы (текстовые занимают меньше места)
+set guioptions= " Вырубаем все лишнее из ГУИ, если надо потогглить см <F6>
 
 " Фолдинг {
     " zf - создает новую складку (актуально при foldmethod=manual).
@@ -286,6 +287,17 @@ let mapleader = "," " мапим кнопку <Leader> на запятую. По
     map <F4> :call ToogleRelativeNumber()<cr>
 " }
 
+" <F6> {
+    function ToggleGUICruft()
+      if &go==''
+        exec('se go=mTrL')
+      else
+        exec('se go=')
+      endif
+    endfunction
+    map <F6> <Esc>:call ToggleGUICruft()<cr>
+" }
+
 " ,f {
     " Fast grep
     " грепает в текущей директории по слову, на котором стоит курсор
@@ -309,7 +321,7 @@ let mapleader = "," " мапим кнопку <Leader> на запятую. По
 " Мапим {действие} от курсора до конца строки {
     nnoremap Y y$ " yank
     nnoremap D d$ " удалить
-    nnoremap C c$ " заменить
+    nnoremap C c$
 " }
 
 " Pasting with correct indention {
@@ -398,10 +410,10 @@ call pathogen#infect() " Сначала запускаем бандл, а зат
 " NERDTree {
     nmap <leader>n :NERDTreeToggle<CR>
     let NERDTreeShowBookmarks=1
-    let NERDTreeChDirMode=2 " Всегда открывать в NERDTree текущую директорию
+    let NERDTreeChDirMode=2
     let NERDTreeQuitOnOpen=1
     let NERDTreeShowHidden=1
-    let NERDTreeKeepTreeInNewTab=1
+    let NERDTreeKeepTreeInNewTab=0
     let NERDTreeMinimalUI=1 " Disables display of the 'Bookmarks' label and 'Press ? for help' text.
     let NERDTreeDirArrows=1 " Tells the NERD tree to use arrows instead of + ~ chars when displaying directories.
 " }

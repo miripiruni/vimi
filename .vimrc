@@ -288,14 +288,14 @@ let mapleader = "," " мапим кнопку <Leader> на запятую. По
 " }
 
 " <F6> {
-    function ToggleGUICruft()
+    function! ToggleGUINoise()
       if &go==''
         exec('se go=mTrL')
       else
         exec('se go=')
       endif
     endfunction
-    map <F6> <Esc>:call ToggleGUICruft()<cr>
+    map <F6> <Esc>:call ToggleGUINoise()<cr>
 " }
 
 " ,f {
@@ -377,6 +377,11 @@ let mapleader = "," " мапим кнопку <Leader> на запятую. По
     nmap <Space> <PageDown>
 " }
 
+" n и N {
+    " когда бегаем по результатам поиска, то пусть они всегда будут в центре
+    nmap n nzz
+    nmap N Nzz
+" }
 
 
 
@@ -424,3 +429,4 @@ call pathogen#infect() " Сначала запускаем бандл, а зат
     vmap <D-/> <Leader>cc
     imap <D-/> <c-o><plug>NERDCommenterToggle
 " }
+

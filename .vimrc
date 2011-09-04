@@ -5,8 +5,6 @@
 set nocompatible " Отключаем режим совместимости с vi. Эту строку лучше держать в начале настроек
 set number       " Показываем нумерацию строк
 
-filetype plugin indent on
-
 set encoding=utf-8 "Sets the character encoding used inside Vim.
 set fileencodings=utf8,cp1251 " Возможные кодировки файлов и последовательность определения
 
@@ -395,6 +393,8 @@ let mapleader = "," " мапим кнопку <Leader> на запятую. По
 " ===================================================================
 
 call pathogen#infect() " Сначала запускаем бандл, а затем настраиваем плагины
+
+filetype plugin indent on
 
 " Solarized {
     set t_Co=16

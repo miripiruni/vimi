@@ -381,6 +381,10 @@ let mapleader = "," " мапим кнопку <Leader> на запятую. По
     " когда бегаем по результатам поиска, то пусть они всегда будут в центре
     nmap n nzz
     nmap N Nzz
+    nmap * *zz
+    nmap # #zz
+    nmap g* g*zz
+    nmap g# g#zz
 " }
 
 
@@ -429,4 +433,6 @@ call pathogen#infect() " Сначала запускаем бандл, а зат
     vmap <D-/> <Leader>cc
     imap <D-/> <c-o><plug>NERDCommenterToggle
 " }
+
+
 

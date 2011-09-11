@@ -18,57 +18,59 @@
     " Interface
         Bundle 'altercation/vim-colors-solarized'
         Bundle 'scrooloose/nerdtree'
-        " Bundle 'ervandew/supertab'
-        " Bundle 'wincent/Command-T'
-        " Bundle 'vim-scripts/taglist.vim'
-        " Bundle 'vim-scripts/IndexedSearch'
-        " Bundle 'rphillips/vim-zoomwin'
+        Bundle 'ervandew/supertab'
+        "Bundle 'wincent/Command-T'
+        "Bundle 'vim-scripts/taglist.vim'
+        "Bundle 'vim-scripts/IndexedSearch'
+        "Bundle 'rphillips/vim-zoomwin'
         Bundle 'mattn/zencoding-vim'
-        " Bundle 'msanders/snipmate.vim'
-        " Bundle 'mileszs/ack.vim'
+        "Bundle 'vim-scripts/UltiSnips'
+        Bundle 'msanders/snipmate.vim'
+        Bundle 'miripiruni/vimi-snippets'
+        "Bundle 'mileszs/ack.vim'
         Bundle 'scrooloose/nerdcommenter'
-        " Bundle 'tpope/vim-surround'
-        " Bundle 'tpope/vim-fugitive'
-        " Bundle 'tsaleh/vim-align'
-        " Bundle 'vim-scripts/bufexplorer.zip'
-        " Bundle 'vim-scripts/delimitMate.vim'
-        " Bundle 'sjl/gundo.vim'
-        " Bundle 'edsono/vim-matchit'
-        " Bundle 'sjl/threesome.vim'
-         Bundle 'chrismetcalf/vim-yankring'
-        " Bundle 'slack/vim-fuzzyfinder'
+        "Bundle 'tpope/vim-surround'
+        "Bundle 'tpope/vim-fugitive'
+        "Bundle 'tsaleh/vim-align'
+        "Bundle 'vim-scripts/bufexplorer.zip'
+        "Bundle 'vim-scripts/delimitMate.vim'
+        "Bundle 'sjl/gundo.vim'
+        "Bundle 'edsono/vim-matchit'
+        "Bundle 'sjl/threesome.vim'
+        Bundle 'chrismetcalf/vim-yankring'
+        "Bundle 'slack/vim-fuzzyfinder'
     " Lua
-        " Bundle 'vim-scripts/lua.vim'
-        " Bundle 'rkowal/Lua-Omni-Vim-Completion'
-        " Bundle 'xolox/vim-lua-ftplugin'
-        " Bundle 'xolox/vim-lua-inspect'
+        "Bundle 'vim-scripts/lua.vim'
+        "Bundle 'rkowal/Lua-Omni-Vim-Completion'
+        "Bundle 'xolox/vim-lua-ftplugin'
+        "Bundle 'xolox/vim-lua-inspect'
     " HTML/HAML
-         Bundle 'othree/html5.vim'
-         Bundle 'hokaccha/vim-html5validator'
-        " Bundle 'tyru/operator-html-escape.vim'
-         Bundle 'tpope/vim-haml'
+        Bundle 'othree/html5.vim'
+        Bundle 'hokaccha/vim-html5validator'
+        "Bundle 'tyru/operator-html-escape.vim'
+        Bundle 'tpope/vim-haml'
     " CSS/LESS
-         Bundle 'hail2u/vim-css3-syntax'
-         Bundle 'skammer/vim-css-color'
-         Bundle 'groenewege/vim-less'
+        Bundle 'hail2u/vim-css3-syntax'
+        Bundle 'skammer/vim-css-color'
+        Bundle 'groenewege/vim-less'
     " JavaScript
-         Bundle 'pangloss/vim-javascript'
-         Bundle 'itspriddle/vim-jquery'
-         Bundle 'kchmck/vim-coffee-script'
+        Bundle 'pangloss/vim-javascript'
+        Bundle 'itspriddle/vim-jquery'
+        Bundle 'kchmck/vim-coffee-script'
     " JSON
-         Bundle 'leshill/vim-json'
+        Bundle 'leshill/vim-json'
     " PHP
-         Bundle 'vim-scripts/php.vim--Garvin'
-         Bundle '2072/PHP-Indenting-for-VIm'
+        Bundle 'vim-scripts/php.vim--Garvin'
+        Bundle '2072/PHP-Indenting-for-VIm'
     " Python/Django
-        " Bundle 'fs111/pydoc.vim'
+        "Bundle 'fs111/pydoc.vim'
     " Perl
-         Bundle 'petdance/vim-perl'
-         Bundle 'ggray/vim-tt2'
+        Bundle 'petdance/vim-perl'
+        Bundle 'ggray/vim-tt2'
     " Ruby/Rails
-        " Bundle 'vim-ruby/vim-ruby'
-        " Bundle 'tpope/vim-rails'
-        " Bundle 'tpope/vim-endwise'
+        "Bundle 'vim-ruby/vim-ruby'
+        "Bundle 'tpope/vim-rails'
+        "Bundle 'tpope/vim-endwise'
 
     filetype plugin indent on     " required!
     " Brief help
@@ -481,3 +483,7 @@
         vmap <D-/> <Leader>cc
         imap <D-/> <c-o><plug>NERDCommenterToggle
 
+    " UltiSnips
+        let g:UltiSnipsExpandTrigger="<tab>"
+        let g:UltiSnipsJumpForwardTrigger="<tab>"
+        let g:UltiSnipsJumpBackwardTrigger="<s-tab>"

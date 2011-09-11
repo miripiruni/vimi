@@ -407,6 +407,48 @@
 
 
 
+
+
+" Environment
+    set history=1000 " store lots of :cmdline history
+    set formatoptions-=o "dont continue comments when pushing o/O
+    cmap w!! %!sudo tee > /dev/null % " save file with root permissions"
+
+    " Backspacing settings
+        " start     allow backspacing over the start of insert; CTRL-W and CTRL-U stop once at the start of insert.
+        " indent    allow backspacing over autoindent
+        " eol       allow backspacing over line breaks (join lines)
+        set backspace=indent,eol,start
+
+    " Backup и swp файлы
+        set backupdir=~/tmp/bac " Директория для backup файлов
+        set directory=~/tmp/swp " Директория для swp файлов
+
+    " Загрузка предыдущей сессии
+        set viminfo='10,\"100,:20,%,n~/.viminfo
+        " Устанавливаем курсор в файле на место, где он был при закрытии этого файла
+        au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+    " AutoReload .vimrc
+        " from http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/
+        " Source the vimrc file after saving it
+        if has("autocmd")
+          autocmd! bufwritepost .vimrc source $MYVIMRC
+        endif
+
+    " Go to last file(s) if invoked without arguments
+        " http://vimcastsim.wikia.com/wiki/Open_the_last_edited_file
+        " autocmd VimLeave * nested if (!isdirectory($HOME . "/.vim")) |
+        "     \ call mkdir($HOME . "/.vim") |
+        "     \ endif |
+        "     \ execute "mksession! " . $HOME . "/.vim/Session.vim"
+        " autocmd VimEnter * nested if argc() == 0 && filereadable($HOME . "/.vim/Session.vim") |
+        "     \ execute "source " . $HOME . "/.vim/Session.vim"
+
+
+
+
+
 " Плагины
 
     " Solarized

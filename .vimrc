@@ -355,8 +355,6 @@
 
 " Плагины
 
-    call pathogen#infect() " Сначала запускаем бандл, а затем настраиваем плагины
-
     filetype plugin indent on
 
     " Solarized

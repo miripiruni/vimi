@@ -75,6 +75,8 @@ Key mapping for textmate-like indentation:
 * `Cmd-[` увеличить
 * `Cmd-]` уменьшить
 
+`K` – перенести часть строки начиная с курсора в начало следующей строки (split/join)
+
 
 Custom commands
 ---------------

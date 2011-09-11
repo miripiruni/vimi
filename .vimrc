@@ -268,8 +268,8 @@
         vmap <C-S-j> xp'[V']
 
     " Мапим {действие} от курсора до конца строки
-        nnoremap Y y$ " yank
-        nnoremap D d$ " удалить
+        nnoremap Y y$
+        nnoremap D d$
         nnoremap C c$
 
     " Pasting with correct indention
@@ -324,6 +324,31 @@
         nmap # #zz
         nmap g* g*zz
         nmap g# g#zz
+
+    " K to split
+        " Basically this splits the current line into two new ones at the cursor position,
+        " then joins the second one with whatever comes next.
+        "
+        " Example:                      Cursor Here
+        "                                    |
+        "                                    V
+        " foo = ('hello', 'world', 'a', 'b', 'c',
+        "        'd', 'e')
+        "
+        " becomes
+        "
+        " foo = ('hello', 'world', 'a', 'b',
+        "        'c', 'd', 'e')
+        "
+        " Especially useful for adding items in the middle of long lists/tuples in Python
+        " while maintaining a sane text width.
+        nnoremap K <nop>
+        nnoremap K h/[^ ]<cr>"zd$jyyP^v$h"zpJk:s/\v +$//<cr>:noh<cr>j^
+
+    " It's 2011. Don't skip wrap lines
+        noremap j gj
+        noremap k gk
+
 
 
 

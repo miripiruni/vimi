@@ -35,24 +35,22 @@
         " Bundle 'sjl/gundo.vim'
         " Bundle 'edsono/vim-matchit'
         " Bundle 'sjl/threesome.vim'
-        " Bundle 'chrismetcalf/vim-yankring'
+         Bundle 'chrismetcalf/vim-yankring'
         " Bundle 'slack/vim-fuzzyfinder'
-    " Tools
-        " Bundle 'tpope/vim-fugitive'
     " Lua
         " Bundle 'vim-scripts/lua.vim'
         " Bundle 'rkowal/Lua-Omni-Vim-Completion'
         " Bundle 'xolox/vim-lua-ftplugin'
         " Bundle 'xolox/vim-lua-inspect'
     " HTML/HAML
-        " Bundle 'othree/html5.vim'
-        " Bundle 'hokaccha/vim-html5validator'
+         Bundle 'othree/html5.vim'
+         Bundle 'hokaccha/vim-html5validator'
         " Bundle 'tyru/operator-html-escape.vim'
-        " Bundle 'tpope/vim-haml'
+         Bundle 'tpope/vim-haml'
     " CSS/LESS
-        " Bundle 'hail2u/vim-css3-syntax'
-        " Bundle 'skammer/vim-css-color'
-        " Bundle 'groenewege/vim-less'
+         Bundle 'hail2u/vim-css3-syntax'
+         Bundle 'skammer/vim-css-color'
+         Bundle 'groenewege/vim-less'
     " JavaScript
         " Bundle 'pangloss/vim-javascript'
         " Bundle 'itspriddle/vim-javascript-indent'
@@ -75,7 +73,6 @@
         " Bundle 'tpope/vim-endwise'
 
     filetype plugin indent on     " required!
-    "
     " Brief help
     " :BundleList          - list configured bundles
     " :BundleInstall(!)    - install(update) bundles

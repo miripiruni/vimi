@@ -401,6 +401,9 @@
         noremap j gj
         noremap k gk
 
+    " <Return> toggle command mode
+        nmap <Return> :
+
 
 
 

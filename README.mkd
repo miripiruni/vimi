@@ -77,6 +77,8 @@ Key mapping for textmate-like indentation:
 
 `K` – перенести часть строки начиная с курсора в начало следующей строки (split/join)
 
+`Return` – toggle command mode
+
 
 Custom commands
 ---------------

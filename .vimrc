@@ -52,21 +52,19 @@
          Bundle 'skammer/vim-css-color'
          Bundle 'groenewege/vim-less'
     " JavaScript
-        " Bundle 'pangloss/vim-javascript'
-        " Bundle 'itspriddle/vim-javascript-indent'
-        " Bundle 'othree/javascript-syntax.vim'
-        " Bundle 'itspriddle/vim-jquery'
-        " Bundle 'kchmck/vim-coffee-script'
+         Bundle 'pangloss/vim-javascript'
+         Bundle 'itspriddle/vim-jquery'
+         Bundle 'kchmck/vim-coffee-script'
     " JSON
-        " Bundle 'leshill/vim-json'
+         Bundle 'leshill/vim-json'
     " PHP
-        " Bundle 'vim-scripts/php.vim--Garvin'
-        " Bundle '2072/PHP-Indenting-for-VIm'
+         Bundle 'vim-scripts/php.vim--Garvin'
+         Bundle '2072/PHP-Indenting-for-VIm'
     " Python/Django
         " Bundle 'fs111/pydoc.vim'
     " Perl
-        " Bundle 'petdance/vim-perl'
-        " Bundle 'ggray/vim-tt2'
+         Bundle 'petdance/vim-perl'
+         Bundle 'ggray/vim-tt2'
     " Ruby/Rails
         " Bundle 'vim-ruby/vim-ruby'
         " Bundle 'tpope/vim-rails'

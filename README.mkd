@@ -70,14 +70,16 @@ Hot keys
 
 `Space` – пролистнуть на страницу вниз (как в браузерах)
 
+`Return` – toggle command mode
+
+`Backspace` – Toggle NerdTree
+
 Key mapping for textmate-like indentation:
 
 * `Cmd-[` увеличить
 * `Cmd-]` уменьшить
 
 `K` – перенести часть строки начиная с курсора в начало следующей строки (split/join)
-
-`Return` – toggle command mode
 
 
 Custom commands

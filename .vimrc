@@ -108,26 +108,27 @@
                 "   {lines}x{columns}.
     " set scrolljump=5
     " set scrolloff=3
-    set scrolloff=999   " focus mode like in Writer app http://www.iawriter.com/
-    set showtabline=2   " Показывать табы всегда
-    set list            " Показывать табуляцию и eol-символ текущей строки
-    set wrap            " Включаем перенос строк (http://vimcasts.org/episodes/soft-wrapping-text/)
-    set linebreak       " Перенос не разрывая слов
-    set autoindent      " Копирует отступ от предыдущей строки
-    set smartindent     " Включаем 'умную' автоматическую расстановку отступов
+    set scrolloff=999       " focus mode like in Writer app http://www.iawriter.com/
+    set showtabline=2       " Показывать табы всегда
+    set list                " Показывать табуляцию и eol-символ текущей строки
+    set wrap                " Включаем перенос строк (http://vimcasts.org/episodes/soft-wrapping-text/)
+    set colorcolumn=120  " Подсвечиваем эти столбцы
+    set linebreak           " Перенос не разрывая слов
+    set autoindent          " Копирует отступ от предыдущей строки
+    set smartindent         " Включаем 'умную' автоматическую расстановку отступов
     set expandtab
-    set shiftwidth=4    " Размер сдвига при нажатии на клавиши << и >>
-    set tabstop=4       " Размер табуляции
+    set shiftwidth=4        " Размер сдвига при нажатии на клавиши << и >>
+    set tabstop=4           " Размер табуляции
     set softtabstop=4
-    set linespace=1     " add some line space for easy reading
-    set cursorline      " Подсветка строки, в которой находится в данный момент курсор
-    set gcr=n:blinkon0  " Отключаем мигание курсора в MacVim. Больше никакого стресса.
-    "set guioptions-=T  " Отключаем панель инструментов
-    "set guioptions+=e  " Отключаем графические табы (текстовые занимают меньше места)
-    set guioptions=     " Вырубаем все лишнее из ГУИ, если надо потогглить см <F6>
-    set guicursor=      " Отключаем мигание курсора
-    set splitbelow      " новый сплит будет ниже текущего :sp
-    set splitright      " новый сплит будет правее текущего :vsp
+    set linespace=1         " add some line space for easy reading
+    set cursorline          " Подсветка строки, в которой находится в данный момент курсор
+    set gcr=n:blinkon0      " Отключаем мигание курсора в MacVim. Больше никакого стресса.
+    "set guioptions-=T      " Отключаем панель инструментов
+    "set guioptions+=e      " Отключаем графические табы (текстовые занимают меньше места)
+    set guioptions=         " Вырубаем все лишнее из ГУИ, если надо потогглить см <F6>
+    set guicursor=          " Отключаем мигание курсора
+    set splitbelow          " новый сплит будет ниже текущего :sp
+    set splitright          " новый сплит будет правее текущего :vsp
 
     " Не бибикать!
         set novisualbell
@@ -257,9 +258,9 @@
         endfunction
         map ,r :call Replace()<CR>
 
-    " <Enter>
+    " <Esc>
         " Clear the search highlight by pressing ENTER when in Normal mode (Typing commands)
-        :nnoremap <CR> :nohlsearch<CR>/<BS><CR>
+        :nnoremap <Esc> :nohlsearch<CR>/<BS><CR>
 
     " < >
         vnoremap < <gv
@@ -457,7 +458,7 @@
         colorscheme solarized
 
     " NERDTree
-        nmap <leader>n :NERDTreeToggle<CR>
+        nmap <Bs> :NERDTreeToggle<CR>
         let NERDTreeShowBookmarks=1
         let NERDTreeChDirMode=2
         let NERDTreeQuitOnOpen=1

@@ -262,7 +262,7 @@
 
     " <Esc>
         " Clear the search highlight by pressing ENTER when in Normal mode (Typing commands)
-        :nnoremap <Esc> :nohlsearch<CR>/<BS><CR>
+        :nnoremap <Esc> :nohlsearch<CR>/<BS>
 
     " < >
         vnoremap < <gv
@@ -410,6 +410,12 @@
     " gf открывает фойл под курсором в новой табе
         " (по дефолту gf открывает файл в том же буфере)
         nmap gf :tabedit <cfile><CR>
+
+    " buffer
+        nmap <Leader><left>  :leftabove  vnew<CR>
+        nmap <Leader><right> :rightbelow vnew<CR>
+        nmap <Leader><up>    :leftabove  new<CR>
+        nmap <Leader><down>  :rightbelow new<CR>
 
 
 

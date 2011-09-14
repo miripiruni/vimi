@@ -112,7 +112,9 @@
     set showtabline=2       " Показывать табы всегда
     set list                " Показывать табуляцию и eol-символ текущей строки
     set wrap                " Включаем перенос строк (http://vimcasts.org/episodes/soft-wrapping-text/)
-    set colorcolumn=120  " Подсвечиваем эти столбцы
+    if version >= 703
+        set colorcolumn=120  " Подсвечиваем эти столбцы
+    endif
     set linebreak           " Перенос не разрывая слов
     set autoindent          " Копирует отступ от предыдущей строки
     set smartindent         " Включаем 'умную' автоматическую расстановку отступов
@@ -310,7 +312,7 @@
     " ,f
         " Fast grep
         " грепает в текущей директории по слову, на котором стоит курсор
-        map <Leader>f :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR> 
+        map <Leader>f :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 
     " Перемещение строк
         " переместить одну строку
@@ -352,7 +354,7 @@
         imap <silent> <C-s> <Esc>:w<CR>a
 
     " <C-w> to close the current buffer
-        nmap <silent> <C-w> :bdelete<CR>
+        "nmap <silent> <C-w> :bdelete<CR>
 
     " Tab navigation
         nmap <Tab> gt
@@ -405,6 +407,9 @@
     " <Return> toggle command mode
         nmap <Return> :
 
+    " gf открывает фойл под курсором в новой табе
+        " (по дефолту gf открывает файл в том же буфере)
+        nmap gf :tabedit <cfile><CR>
 
 
 

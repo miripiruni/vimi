@@ -353,13 +353,6 @@
         nmap <C-s> :w<CR>
         imap <silent> <C-s> <Esc>:w<CR>a
 
-    " <C-w> to close the current buffer
-        "nmap <silent> <C-w> :bdelete<CR>
-
-    " Tab navigation
-        nmap <Tab> gt
-        nmap <S-Tab> gT
-
     " Textmate-like indentation
         nmap <D-[> <<
         nmap <D-]> >>
@@ -416,6 +409,14 @@
         nmap <Leader><right> :rightbelow vnew<CR>
         nmap <Leader><up>    :leftabove  new<CR>
         nmap <Leader><down>  :rightbelow new<CR>
+
+    " <C-w> to close the current buffer
+        "nmap <silent> <C-w> :bdelete<CR>
+
+    " Tab & split navigation
+        nmap <C-Tab> <C-W>w
+        nmap <A-Tab> gt
+        nmap <A-S-Tab> gT
 
 
 

@@ -131,6 +131,7 @@
     set guicursor=          " Отключаем мигание курсора
     set splitbelow          " новый сплит будет ниже текущего :sp
     set splitright          " новый сплит будет правее текущего :vsp
+    set shortmess+=I        " не показывать intro screen
 
     " Не бибикать!
         set novisualbell

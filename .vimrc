@@ -459,6 +459,8 @@
         " autocmd VimEnter * nested if argc() == 0 && filereadable($HOME . "/.vim/Session.vim") |
         "     \ execute "source " . $HOME . "/.vim/Session.vim"
 
+    " Save on losing focus
+        autocmd FocusLost * :wa
 
 
 

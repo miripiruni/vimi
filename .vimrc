@@ -85,7 +85,7 @@
 
 
 " Interface
-    set number                    " Показываем нумерацию строк
+    set nonumber                    " Показываем нумерацию строк
     set encoding=utf-8            " character encoding used inside Vim.
     set fileencodings=utf8,cp1251 " Возможные кодировки файлов и последовательность определения
     set wildmenu " Саджест по <tab> в командной строке
@@ -401,9 +401,9 @@
     " <Return> toggle command mode
         nmap <Return> :
 
-    " gf открывает фойл под курсором в новой табе
+    " gf открывает фойл под курсором в вертикальном сплите
         " (по дефолту gf открывает файл в том же буфере)
-        nmap gf :tabedit <cfile><CR>
+        nmap gf :vertical wincmd f<CR>
 
     " buffer
         nmap <Leader><left>  :leftabove  vnew<CR>

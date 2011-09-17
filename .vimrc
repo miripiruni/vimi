@@ -244,6 +244,7 @@
 
     " ,m
         " в Normal mode тогглит поддержку мыши
+        set mouse=
         function! ToggleMouse()
           if &mouse == 'a'
             set mouse=

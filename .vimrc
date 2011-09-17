@@ -132,6 +132,7 @@
     set splitbelow          " новый сплит будет ниже текущего :sp
     set splitright          " новый сплит будет правее текущего :vsp
     set shortmess+=I        " не показывать intro screen
+    set mouseshape=s:udsizing,m:no " mouse turn to a sizing arrow over the status lines
 
     " Не бибикать!
         set novisualbell

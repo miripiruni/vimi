@@ -155,17 +155,20 @@
     " Приводим в порядок status line
         " from https://github.com/vgod/vimrc/blob/master/vimrc
         set laststatus=2
-        set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\ \ 
-        set statusline+=\ \ \ [%{&ff}/%Y]%=file=%{&fileencoding}\ enc=%{&encoding}\ 
-        set statusline+=\ \ \ %<%20.30(%{hostname()}:%{CurDir()}%)\ 
-        set statusline+=\ \ \ %=%-10.(%l,%c%V%)\ %p%%/%L
-        fun! CurDir()
-            let curdir = substitute(getcwd(), $HOME, "~", "")
-            return curdir
-        endfunction
+        set statusline=\ 
+        set statusline+=%<                   " where truncate if line too long
+        set statusline+=%F                  " filename with full path
+        set statusline+=%=                  " separation between left and right
+        set statusline+=%{HasPaste()}
+        set statusline+=%{&fileencoding}
+        set statusline+=\ \ %Y              " type of file
+        set statusline+=\ \ %1.3(%c%)       " column number
+        set statusline+=\ \ %3.9(%l/%L%)    " line / total lines
+        set statusline+=\ \ %1.2p%%         " percentage through file in lines
+        set statusline+=\ 
         fun! HasPaste()
             if &paste
-                return '[PASTE]'
+                return 'Paste On  '
             else
                 return ''
             endif
@@ -269,18 +272,12 @@
         vnoremap < <gv
         vnoremap > >gv
 
-    " <F3>
+    " ,p
         " Вставлять код извне без этой строчки проблематично, без нее начитается
         " бешеный реформат кода
         set pastetoggle=<F3>
 
-    " <F2>
-        " Fast Save File
-        map <F2> :w<CR>
-        vmap <F2> <ESC>:w<CR>v
-        imap <F2> <ESC>:w<CR>i
-
-    " <F4>
+    " ,n
         " Toggle line numbers type http://stackoverflow.com/questions/4387210/vim-how-to-map-two-tasks-under-one-shortcut-key
         let g:relativenumber = 0
         function! ToogleRelativeNumber()
@@ -298,9 +295,9 @@
             set norelativenumber
           endif
         endfunction
-        map <F4> :call ToogleRelativeNumber()<cr>
+        map ,n :call ToogleRelativeNumber()<cr>
 
-    " <F6>
+    " ,g
         function! ToggleGUINoise()
           if &go==''
             exec('se go=mTrL')
@@ -308,7 +305,7 @@
             exec('se go=')
           endif
         endfunction
-        map <F6> <Esc>:call ToggleGUINoise()<cr>
+        map ,g <Esc>:call ToggleGUINoise()<cr>
 
     " ,f
         " Fast grep
@@ -419,6 +416,9 @@
         nmap <A-Tab> gt
         nmap <A-S-Tab> gT
 
+    " ,c
+        " camelCase => camel_case
+        vnoremap <silent> ,c :s/\v\C(([a-z]+)([A-Z]))/\2_\l\3/g<CR>
 
 
 
@@ -471,6 +471,7 @@
         syntax enable
         set background=dark
         colorscheme solarized
+        call togglebg#map(",b")
 
     " NERDTree
         nmap <Bs> :NERDTreeToggle<CR>

@@ -27,7 +27,7 @@
         "Bundle 'vim-scripts/UltiSnips'
         Bundle 'msanders/snipmate.vim'
         Bundle 'miripiruni/vimi-snippets'
-        "Bundle 'mileszs/ack.vim'
+        Bundle 'mileszs/ack.vim'
         Bundle 'scrooloose/nerdcommenter'
         "Bundle 'tpope/vim-surround'
         "Bundle 'tpope/vim-fugitive'
@@ -329,8 +329,8 @@
         nnoremap C c$
 
     " Pasting with correct indention
-        nmap ]p p=`]
-        nmap ]P P=`[
+        nmap p p=`]
+        nmap P P=`[
 
     " Disable <Arrow keys>
         " Warning: nightmare mode!

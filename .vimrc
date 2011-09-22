@@ -159,7 +159,8 @@
         set statusline=\ 
         set statusline+=%<                   " where truncate if line too long
         set statusline+=%F                  " filename with full path
-        set statusline+=%=                  " separation between left and right
+        set statusline+=\ \ 
+        " set statusline+=%=                  " separation between left and right
         set statusline+=%{HasPaste()}
         set statusline+=%{&fileencoding}
         set statusline+=\ \ %Y              " type of file

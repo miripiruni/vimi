@@ -36,7 +36,7 @@
         "Bundle 'git://github.com/vim-scripts/delimitMate.vim.git'
         "Bundle 'git://github.com/sjl/gundo.vim.git'
         "Bundle 'git://github.com/edsono/vim-matchit.git'
-        "Bundle 'git://github.com/sjl/threesome.vim.git'
+        Bundle 'git://github.com/sjl/threesome.vim.git'
         Bundle 'git://github.com/chrismetcalf/vim-yankring.git'
         "Bundle 'git://github.com/slack/vim-fuzzyfinder.git'
     " Lua

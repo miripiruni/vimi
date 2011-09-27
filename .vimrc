@@ -14,7 +14,7 @@
     "
     " Libs
         " For FuzzyFinder:
-        Bundle 'L9'
+        "Bundle 'L9'
     " Interface
         Bundle 'git://github.com/altercation/vim-colors-solarized.git'
         Bundle 'git://github.com/scrooloose/nerdtree.git'

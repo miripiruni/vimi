@@ -7,7 +7,7 @@ Please address bugs and your suggestions to [Issues](http://github.com/miripirun
 How to
 ------
 
-Я предпочитаю использовать MacVim в режиме fullscreen. Пока .vimrc обкатывался только на нем.
+Я предпочитаю использовать iTerm2 + Vim + Solarized. Пока .vimrc обкатывался только на этом сетапе.
 
 
 Install

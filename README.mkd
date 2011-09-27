@@ -69,6 +69,8 @@ Hot keys
 
 `Space` пролистнуть на страницу вниз (как в браузерах)
 
+`Space-Space` точка и пробел (как в айФоне)
+
 `Return` toggle command mode
 
 `Esc` в Normal mode убирает подсветку найденных совпадений при поиске

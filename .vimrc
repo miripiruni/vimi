@@ -423,7 +423,8 @@
         " camelCase => camel_case
         vnoremap <silent> ,c :s/\v\C(([a-z]+)([A-Z]))/\2_\l\3/g<CR>
 
-
+    " Double space to ". "
+        imap <Space><Space> . 
 
 
 " Environment

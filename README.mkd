@@ -14,8 +14,8 @@ Install
 -------
 
 1. Удалите или переместите текущие ~/.vim и ~/.vimrc если они есть
-2. Выполните `cd ~; git clone git@github.com:miripiruni/vimi.git vimi; cp vimi/.vimrc .vimrc; cp -r vimi/.vim .vim`
-3. Выполните `git clone http://github.com/gmarik/vundle.git ~/vimi/.vim/bundle/vundle`
+2. Выполните `cd ~; git clone git://github.com/miripiruni/vimi.git vimi; cp vimi/.vimrc .vimrc; cp -r vimi/.vim .vim`
+3. Выполните `git clone git://github.com/gmarik/vundle.git ~/vimi/.vim/bundle/vundle`
 4. Теперь запустите vim и, если нужно, отредактируйте список необходимых плагинов в файле .vimrc и выполните инициализацию бандла `:BundleInstall`
 5. Перезапустите vim
 

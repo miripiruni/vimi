@@ -278,7 +278,7 @@
     " ,p
         " Вставлять код извне без этой строчки проблематично, без нее начитается
         " бешеный реформат кода
-        set pastetoggle=<F3>
+        set pastetoggle=,p
 
     " ,n
         " Toggle line numbers type http://stackoverflow.com/questions/4387210/vim-how-to-map-two-tasks-under-one-shortcut-key
@@ -350,18 +350,6 @@
         " Pressing ,v opens the .vimrc in a new tab
         nmap <leader>v :tabedit $MYVIMRC<CR>
 
-    " <C-s> for saving file
-        nmap <C-s> :w<CR>
-        imap <silent> <C-s> <Esc>:w<CR>a
-
-    " Textmate-like indentation
-        nmap <D-[> <<
-        nmap <D-]> >>
-        vmap <D-[> <gv
-        vmap <D-]> >gv
-        imap <D-[> <c-o><<
-        imap <D-]> <c-o>>>
-
     " <Space> = <PageDown> Как в браузерах
         nmap <Space> <PageDown>
 
@@ -410,14 +398,6 @@
         nmap <Leader><right> :rightbelow vnew<CR>
         nmap <Leader><up>    :leftabove  new<CR>
         nmap <Leader><down>  :rightbelow new<CR>
-
-    " <C-w> to close the current buffer
-        "nmap <silent> <C-w> :bdelete<CR>
-
-    " Tab & split navigation
-        nmap <C-Tab> <C-W>w
-        nmap <A-Tab> gt
-        nmap <A-S-Tab> gT
 
     " ,c
         " camelCase => camel_case

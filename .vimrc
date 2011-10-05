@@ -21,10 +21,12 @@
         Bundle 'git://github.com/ervandew/supertab.git'
         "Bundle 'git://github.com/wincent/Command-T.git'
         "Bundle 'git://github.com/vim-scripts/taglist.vim.git'
+        " depends: http://ctags.sourceforge.net/
+        "Bundle 'git://github.com/int3/vim-taglist-plus.git'
         "Bundle 'git://github.com/vim-scripts/IndexedSearch.git'
         "Bundle 'git://github.com/rphillips/vim-zoomwin.git'
         Bundle 'git://github.com/mattn/zencoding-vim.git'
-        "Bundle 'git://github.com/vim-scripts/UltiSnips.git'
+        Bundle 'git://github.com/vim-scripts/UltiSnips.git'
         Bundle 'git://github.com/msanders/snipmate.vim.git'
         Bundle 'git://github.com/miripiruni/vimi-snippets.git'
         Bundle 'git://github.com/mileszs/ack.vim.git'
@@ -39,6 +41,7 @@
         Bundle 'git://github.com/sjl/threesome.vim.git'
         Bundle 'git://github.com/chrismetcalf/vim-yankring.git'
         "Bundle 'git://github.com/slack/vim-fuzzyfinder.git'
+        Bundle 'git://github.com/vim-scripts/vimwiki.git'
     " Lua
         "Bundle 'git://github.com/vim-scripts/lua.vim.git'
         "Bundle 'git://github.com/rkowal/Lua-Omni-Vim-Completion.git'
@@ -53,6 +56,7 @@
         Bundle 'git://github.com/hail2u/vim-css3-syntax.git'
         Bundle 'git://github.com/skammer/vim-css-color.git'
         Bundle 'git://github.com/groenewege/vim-less.git'
+        Bundle 'git://github.com/miripiruni/vim-better-css-indent.git'
     " JavaScript
         Bundle 'git://github.com/pangloss/vim-javascript.git'
         Bundle 'git://github.com/itspriddle/vim-jquery.git'
@@ -482,12 +486,14 @@
           \}
 
     " NERDCommenter
-        " IDEA-like and TextMate-like comment shortcuts
-        nmap <D-/> <Leader>c<space>
-        vmap <D-/> <Leader>cc
-        imap <D-/> <c-o><plug>NERDCommenterToggle
+        "nmap <C-/> <Leader>c<space>
+        "vmap <C-/> <Leader>cc
+        "imap <C-/> <c-o><plug>NERDCommenterToggle
 
     " UltiSnips
         let g:UltiSnipsExpandTrigger="<tab>"
         let g:UltiSnipsJumpForwardTrigger="<tab>"
         let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+    " VimWiki
+        let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]

@@ -132,6 +132,7 @@
     "set guioptions-=T      " Отключаем панель инструментов
     "set guioptions+=e      " Отключаем графические табы (текстовые занимают меньше места)
     set guioptions=         " Вырубаем все лишнее из ГУИ, если надо потогглить см <F6>
+    set t_Co=256            " Кол-во цветов
     set guicursor=          " Отключаем мигание курсора
     set splitbelow          " новый сплит будет ниже текущего :sp
     set splitright          " новый сплит будет правее текущего :vsp
@@ -457,6 +458,7 @@
 
     " Solarized
         syntax enable
+        let g:solarized_termcolors=256
         set background=dark
         colorscheme solarized
         call togglebg#map(",b")

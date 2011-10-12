@@ -238,7 +238,7 @@
     set hlsearch    " Включаем подсветку выражения, которое ищется в тексте
     set ignorecase  " Игнорировать регистр букв при поиске
     set smartcase
-    set gdefault
+    set gdefault    " Включает флаг g в командах замены, типа :s/a/b/
 
 
 

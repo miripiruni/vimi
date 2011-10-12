@@ -158,28 +158,64 @@
               let &sbr = nr2char(8618).' '  " Show ↪ at the beginning of wrapped lines
         endif
 
+
     " Приводим в порядок status line
-        " from https://github.com/vgod/vimrc/blob/master/vimrc
+
+        " Func for word count in status line
+            " http://stackoverflow.com/questions/114431/fast-word-count-function-in-vim
+            function! GetWordCount()
+                let s:old_status = v:statusmsg
+                exe "silent normal g\<c-g>"
+                if v:statusmsg != '--No lines in buffer--'
+                    let s:word_count = str2nr(split(v:statusmsg)[11]) . " words"
+                else
+                    let s:word_count = ""
+                endif
+                let v:statusmsg = s:old_status
+                return s:word_count
+            endfunction
+
+        " Func for display in status line pastemode
+            fun! HasPaste()
+                if &paste
+                    return 'Paste On  '
+                else
+                    return ''
+                endif
+            endfunction
+
+        " Filesize for status line
+            function! FileSize()
+                let bytes = getfsize(expand("%:p"))
+                if bytes <= 0
+                    return ""
+                endif
+                if bytes < 1024
+                    return bytes . "B"
+                else
+                    return (bytes / 1024) . "K"
+                endif
+            endfunction
+
+        " see https://github.com/vgod/vimrc/blob/master/vimrc
         set laststatus=2
         set statusline=\ 
         set statusline+=%<                   " where truncate if line too long
+        set statusline+=%n:\                 " buffer number
         set statusline+=%F                  " filename with full path
         set statusline+=\ \ 
         " set statusline+=%=                  " separation between left and right
         set statusline+=%{HasPaste()}
         set statusline+=%{&fileencoding}
         set statusline+=\ \ %Y              " type of file
-        set statusline+=\ \ %1.3(%c%)       " column number
+        set statusline+=\ %3.3(%c%)       " column number
         set statusline+=\ \ %3.9(%l/%L%)    " line / total lines
         set statusline+=\ \ %1.2p%%         " percentage through file in lines
-        set statusline+=\ 
-        fun! HasPaste()
-            if &paste
-                return 'Paste On  '
-            else
-                return ''
-            endif
-        endfunction
+        set statusline+=\ \ %{FileSize()}
+        set statusline+=\ \ %{GetWordCount()}
+
+
+
 
     " Show the line and column number of the cursor position
         set ruler

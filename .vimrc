@@ -1,3 +1,9 @@
+"=============================================================================
+" Description: Vimi bundle .vimrc
+" Author: Vyacheslav Oliyanchuk <miripiruni@gmail.com>
+" Url: http://github.com/miripiruni/vimi/
+"=============================================================================
+
 " Vundle setup
     set nocompatible " be iMproved
     filetype off     " required!
@@ -486,6 +492,9 @@
 
     " Save on losing focus
         autocmd FocusLost * :wa
+
+    " Auto change the directory to the current file I'm working on
+        autocmd BufEnter * lcd %:p:h
 
 
 

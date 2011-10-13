@@ -146,7 +146,7 @@
     set mouseshape=s:udsizing,m:no " mouse turn to a sizing arrow over the status lines
 
     " Не бибикать!
-        set novisualbell
+        set visualbell " Use visual bell instead of beeping
         set t_vb=
 
     " Символ табуляции и конца строки
@@ -316,7 +316,7 @@
 
     " <Esc>
         " Clear the search highlight by pressing ENTER when in Normal mode (Typing commands)
-        :nnoremap <Esc> :nohlsearch<CR>/<BS>
+        nnoremap <Esc><Esc> :nohlsearch<CR><Esc>
 
     " < >
         vnoremap < <gv

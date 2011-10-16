@@ -120,7 +120,8 @@
     " set scrolloff=3
     set scrolloff=999       " focus mode like in Writer app http://www.iawriter.com/
     set showtabline=2       " Показывать табы всегда
-    set list                " Показывать табуляцию и eol-символ текущей строки
+    "set list    <- из-зв этой фигни глючит: первый символ в инсерте остается всегда справа от курсора.
+    " Показывать табуляцию и eol-символ текущей строки
     set wrap                " Включаем перенос строк (http://vimcasts.org/episodes/soft-wrapping-text/)
     if version >= 703
         set colorcolumn=120  " Подсвечиваем эти столбцы
@@ -203,22 +204,28 @@
                 endif
             endfunction
 
+        function! CurDir()
+            let curdir = substitute(getcwd(), '/Users/miripiruni', "~", "g")
+            return curdir
+        endfunction
+
         " see https://github.com/vgod/vimrc/blob/master/vimrc
         set laststatus=2
         set statusline=\ 
         set statusline+=%<                   " where truncate if line too long
-        set statusline+=%n:\                 " buffer number
-        set statusline+=%F                  " filename with full path
+        set statusline+=%n:                  " buffer number
+        set statusline+=%t                   " filename with full path
         set statusline+=\ \ 
-        " set statusline+=%=                  " separation between left and right
+        " set statusline+=%=                 " separation between left and right
         set statusline+=%{HasPaste()}
         set statusline+=%{&fileencoding}
-        set statusline+=\ \ %Y              " type of file
-        set statusline+=\ %3.3(%c%)       " column number
-        set statusline+=\ \ %3.9(%l/%L%)    " line / total lines
-        set statusline+=\ \ %1.2p%%         " percentage through file in lines
+        set statusline+=\ \ %Y               " type of file
+        set statusline+=\ %3.3(%c%)          " column number
+        set statusline+=\ \ %3.9(%l/%L%)     " line / total lines
+        set statusline+=\ \ %2.3p%%          " percentage through file in lines
         set statusline+=\ \ %{FileSize()}
         set statusline+=\ \ %{GetWordCount()}
+        set statusline+=\ \ CurDir:%{CurDir()}
 
 
 
@@ -452,6 +459,7 @@
 
     " Double space to ". "
         imap <Space><Space> . 
+
 
 
 " Environment

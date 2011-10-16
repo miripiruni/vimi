@@ -323,7 +323,7 @@
 
     " <Esc>
         " Clear the search highlight by pressing ENTER when in Normal mode (Typing commands)
-        nnoremap <Esc><Esc> :nohlsearch<CR><Esc>
+        nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
 
     " < >
         vnoremap < <gv

@@ -170,17 +170,17 @@
 
         " Func for word count in status line
             " http://stackoverflow.com/questions/114431/fast-word-count-function-in-vim
-            "function! GetWordCount()
-                "let s:old_status = v:statusmsg
-                "exe "silent normal g\<c-g>"
-                "if v:statusmsg != '--No lines in buffer--'
-                    "let s:word_count = str2nr(split(v:statusmsg)[11]) . " words"
-                "else
-                    "let s:word_count = ""
-                "endif
-                "let v:statusmsg = s:old_status
-                "return s:word_count
-            "endfunction
+            function! GetWordCount()
+                let s:old_status = v:statusmsg
+                exe "silent normal g\<c-g>"
+                if v:statusmsg != '--No lines in buffer--'
+                    let s:word_count = str2nr(split(v:statusmsg)[11]) . " words"
+                else
+                    let s:word_count = ""
+                endif
+                let v:statusmsg = s:old_status
+                return s:word_count
+            endfunction
 
         " Func for display in status line pastemode
             fun! HasPaste()
@@ -213,7 +213,7 @@
         set laststatus=2
         set statusline=\ 
         set statusline+=%<                   " where truncate if line too long
-        set statusline+=%n:\                   " buffer number
+        set statusline+=%n:                  " buffer number
         set statusline+=%t                   " filename with full path
         set statusline+=\ \ 
         " set statusline+=%=                 " separation between left and right
@@ -224,9 +224,8 @@
         set statusline+=\ \ %3.9(%l/%L%)     " line / total lines
         set statusline+=\ \ %2.3p%%          " percentage through file in lines
         set statusline+=\ \ %{FileSize()}
-        "set statusline+=\ \ %{GetWordCount()}
+        set statusline+=\ \ %{GetWordCount()}
         set statusline+=\ \ CurDir:%{CurDir()}
-
 
 
 
@@ -442,7 +441,7 @@
         noremap k gk
 
     " <Return> toggle command mode
-        nmap <Return> :
+        "nmap <Return> :
 
     " gf открывает фойл под курсором в вертикальном сплите
         " (по дефолту gf открывает файл в том же буфере)
@@ -500,7 +499,7 @@
         "     \ execute "source " . $HOME . "/.vim/Session.vim"
 
     " Save on losing focus
-        autocmd FocusLost * :wa 
+        "autocmd FocusLost * :wa 
 
     " Auto change the directory to the current file I'm working on
         autocmd BufEnter * lcd %:p:h

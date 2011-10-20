@@ -19,6 +19,10 @@ Please address bugs and your suggestions to [Issues](http://github.com/miripirun
 4. Теперь запустите vim и, если нужно, отредактируйте список необходимых плагинов в файле .vimrc и выполните инициализацию бандла `:BundleInstall`
 5. Перезапустите vim
 
+Скриншот
+--------
+
+![vimi](http://miripiruni.org/i/vimi.png "vimi")
 
 
 Шорткаты

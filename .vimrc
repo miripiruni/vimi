@@ -179,15 +179,6 @@
                 "return s:word_count
             "endfunction
 
-        " Func for display in status line pastemode
-            fun! HasPaste()
-                if &paste
-                    return 'Paste On  '
-                else
-                    return ''
-                endif
-            endfunction
-
         " Filesize for status line
             function! FileSize()
                 let bytes = getfsize(expand("%:p"))
@@ -214,7 +205,7 @@
         set statusline+=%t                   " filename with full path
         set statusline+=\ \ 
         " set statusline+=%=                 " separation between left and right
-        set statusline+=%{HasPaste()}
+        set statusline+=%{&paste?'[paste]\ ':''}
         set statusline+=%{&fileencoding}
         set statusline+=\ \ %Y               " type of file
         set statusline+=\ %3.3(%c%)          " column number
@@ -462,7 +453,6 @@
 
     " Double space to ". "
         imap <Space><Space> . 
-
 
 
 " Environment

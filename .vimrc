@@ -455,7 +455,7 @@
         imap <Space><Space> . 
 
     " Fix Trailing White Space
-        map <leader>ws :%s/\s\+$//e<CR>
+        map <leader>ts :%s/\s\+$//e<CR>
 
 
 " Environment
@@ -470,8 +470,8 @@
         set backspace=indent,eol,start
 
     " Backup и swp файлы
-        set backupdir+=~/vimi/bac " Директория для backup файлов
-        set directory+=~/vimi/swp " Директория для swp файлов
+        set backupdir=~/vimi/bac,.,/tmp " Директория для backup файлов
+        set directory=~/vimi/swp,.,/tmp " Директория для swp файлов
 
     " Загрузка предыдущей сессии
         set viminfo='10,\"100,:20,%,n~/.viminfo

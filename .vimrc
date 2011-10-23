@@ -29,7 +29,7 @@
         "Bundle 'git://github.com/vim-scripts/taglist.vim.git'
         " depends: http://ctags.sourceforge.net/
         "Bundle 'git://github.com/int3/vim-taglist-plus.git'
-        "Bundle 'git://github.com/vim-scripts/IndexedSearch.git'
+        Bundle 'git://github.com/vim-scripts/IndexedSearch.git'
         "Bundle 'git://github.com/rphillips/vim-zoomwin.git'
         Bundle 'git://github.com/mattn/zencoding-vim.git'
         "Bundle 'git://github.com/vim-scripts/UltiSnips.git'
@@ -135,8 +135,6 @@
     set linespace=1         " add some line space for easy reading
     set cursorline          " Подсветка строки, в которой находится в данный момент курсор
     set gcr=n:blinkon0      " Отключаем мигание курсора в MacVim. Больше никакого стресса.
-    "set guioptions-=T      " Отключаем панель инструментов
-    "set guioptions+=e      " Отключаем графические табы (текстовые занимают меньше места)
     set guioptions=         " Вырубаем все лишнее из ГУИ, если надо потогглить см <F6>
     set t_Co=256            " Кол-во цветов
     set guicursor=          " Отключаем мигание курсора

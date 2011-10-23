@@ -454,6 +454,9 @@
     " Double space to ". "
         imap <Space><Space> . 
 
+    " Fix Trailing White Space
+        map <leader>ws :%s/\s\+$//e<CR>
+
 
 " Environment
     set history=1000 " store lots of :cmdline history

@@ -120,8 +120,7 @@
     " set scrolloff=3
     set scrolloff=999       " focus mode like in Writer app http://www.iawriter.com/
     set showtabline=2       " Показывать табы всегда
-    "set list    <- из-зв этой фигни глючит: первый символ в инсерте остается всегда справа от курсора.
-    " Показывать табуляцию и eol-символ текущей строки
+    set list                " display unprintable characters
     set wrap                " Включаем перенос строк (http://vimcasts.org/episodes/soft-wrapping-text/)
     if version >= 703
         set colorcolumn=120  " Подсвечиваем эти столбцы
@@ -320,7 +319,7 @@
             :exe 'bufdo! %s/\<' . expand('<cword>') . '\>/' . s:word . '/ge'
             :unlet! s:word
         endfunction
-        map ,r :call Replace()<CR>
+        map <Leader>r :call Replace()<CR>
 
     " <Esc>
         " Clear the search highlight by pressing ENTER when in Normal mode (Typing commands)
@@ -333,7 +332,7 @@
     " ,p
         " Вставлять код извне без этой строчки проблематично, без нее начитается
         " бешеный реформат кода
-        set pastetoggle=,p
+        set pastetoggle=<Leader>p
 
     " ,n
         " Toggle line numbers type http://stackoverflow.com/questions/4387210/vim-how-to-map-two-tasks-under-one-shortcut-key
@@ -343,32 +342,37 @@
             let g:relativenumber = 1
             set norelativenumber
             set number
+            echo "Show line numbers"
           elseif g:relativenumber == 1
             let g:relativenumber = 2
             set nonumber
             set relativenumber
+            echo "Show relative line numbers"
           else
             let g:relativenumber = 0
             set nonumber
             set norelativenumber
+            echo "Show no line numbers"
           endif
         endfunction
-        map ,n :call ToogleRelativeNumber()<cr>
+        map <Leader>n :call ToogleRelativeNumber()<cr>
 
     " ,g
         function! ToggleGUINoise()
           if &go==''
             exec('se go=mTrL')
+            echo "Show GUI elements"
           else
             exec('se go=')
+            echo "Show no GUI elements"
           endif
         endfunction
-        map ,g <Esc>:call ToggleGUINoise()<cr>
+        map <Leader>g <Esc>:call ToggleGUINoise()<cr>
 
     " ,f
         " Fast grep
         " грепает в текущей директории по слову, на котором стоит курсор
-        map <Leader>f :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+        map <Leader>f :execute "Ack " . expand("<cword>") <Bar> cw<CR>
 
     " Перемещение строк
         " переместить одну строку
@@ -442,7 +446,7 @@
         noremap k gk
 
     " <Return> toggle command mode
-        nmap <Return> :
+        "nmap <Return> :
 
     " gf открывает фойл под курсором в вертикальном сплите
         " (по дефолту gf открывает файл в том же буфере)
@@ -456,7 +460,7 @@
 
     " ,c
         " camelCase => camel_case
-        vnoremap <silent> ,c :s/\v\C(([a-z]+)([A-Z]))/\2_\l\3/g<CR>
+        vnoremap <silent> <Leader>c :s/\v\C(([a-z]+)([A-Z]))/\2_\l\3/g<CR>
 
     " Double space to ". "
         imap <Space><Space> . 
@@ -508,6 +512,7 @@
 
 
 
+
 " Плагины
 
     " Solarized
@@ -515,7 +520,7 @@
         let g:solarized_termcolors=256
         set background=dark
         colorscheme solarized
-        call togglebg#map(",b")
+        call togglebg#map("<Leader>b")
 
     " NERDTree
         nmap <Bs> :NERDTreeToggle<CR>

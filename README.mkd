@@ -4,32 +4,37 @@ Vim miripiruni's bundle
 
 Please address bugs and your suggestions to [Issues](http://github.com/miripiruni/vimi/issues).
 
-Об окружении
+Environment
 ------------
 
-Я предпочитаю использовать [iTerm2](http://www.iterm2.com/#/section/home) + [Solarized](https://github.com/altercation/solarized/blob/master/iterm2-colors-solarized/Solarized%20Dark.itermcolors) + Vim. Пока .vimrc обкатывался только на этом сетапе.
+* OSX 10.6.8
+* [iTerm2](http://www.iterm2.com/#/section/home)
+* [Solarized](https://github.com/altercation/solarized/blob/master/iterm2-colors-solarized/Solarized%20Dark.itermcolors)
+* [Vim](http://vim.org/)
 
 
-Установка Vimi
+How to install Vimi setup
 --------------
 
-1. Удалите или переместите текущие ~/.vim и ~/.vimrc если они есть
-2. Выполните `cd ~; git clone git://github.com/miripiruni/vimi.git vimi; ln -s vimi/.vimrc .vimrc; ln -s vimi/.vim .vim`
-3. Выполните `git clone git://github.com/gmarik/vundle.git ~/vimi/.vim/bundle/vundle`
-4. Теперь запустите vim и, если нужно, отредактируйте список необходимых плагинов в файле .vimrc и выполните инициализацию бандла `:BundleInstall`
-5. Перезапустите vim
+0. Delete or remove current ~/.vim и ~/.vimrc
+1. `cd ~; git clone git://github.com/miripiruni/vimi.git vimi; ln -s vimi/.vimrc .vimrc; ln -s vimi/.vim .vim`
+2. `git clone git://github.com/gmarik/vundle.git ~/vimi/.vim/bundle/vundle`
+3. Start vim and edit list of plugins in .vimrc
+4. In vim enter `:BundleInstall`
+5. Restart vim
 
-Скриншот
+
+Screenshot
 --------
 
 ![vimi](http://miripiruni.org/i/vimi.png "vimi")
 
 
-Шорткаты
+Shortcuts
 --------
 
 Я придерживаюсь принципиального правила ничего не мапить на F-клавиши. Во-первых, у меня
-на маке они заняты, во-вторых, они слишком далеко. Все мапы в основном через `<Leader>`, который по обыкновынию кнопка `,`.
+на маке они заняты, во-вторых, они слишком далеко. Все мапы в основном через `<Leader>`, который по обыкновению кнопка `,`.
 
 
 `,r` Замена слова под курсором во всех открытых буферах
@@ -46,13 +51,10 @@ Please address bugs and your suggestions to [Issues](http://github.com/miripirun
 
 Создать новый сплит:
 
-`,→` справа
-
-`,←` слева
-
-`,↑` сверху
-
-`,↓` снизу
+* `,→` справа
+* `,←` слева
+* `,↑` сверху
+* `,↓` снизу
 
 `p` или `P` Вставить текст и отформатировать правильные отступы в зависимости от контекста
 
@@ -60,7 +62,7 @@ Please address bugs and your suggestions to [Issues](http://github.com/miripirun
 
 {действие} от курсора до конца строки:
 
-* `Y` yank
+* `Y` копировать
 * `D` удалить
 * `C` заменить
 
@@ -74,7 +76,7 @@ Please address bugs and your suggestions to [Issues](http://github.com/miripirun
 
 `Backspace` Toggle NerdTree
 
-Отключаются `Arrow keys` для передвижения курсора. Цель быстрее отвыкнуть от перемещения руки к стрелочкам. Warning: nightmare mode! Но позволяем передвигаться с помощью `hjkl` в Insert mode зажав `Ctrl`
+Отключаются клавиши стрелок для передвижения курсора. Цель быстрее отвыкнуть от перемещения руки к стрелочкам. Warning: nightmare mode! Но позволяем передвигаться с помощью `hjkl` в Insert mode зажав `Ctrl`
 
 Перемещение строк:
 

@@ -88,14 +88,13 @@
     " :BundleInstall(!)    - install(update) bundles
     " :BundleSearch(!) foo - search(or refresh cache first) for foo
     " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-    "
     " see :h vundle for more details or wiki for FAQ
 
 
 
 
 " Interface
-    set nonumber                    " Показываем нумерацию строк
+    set nonumber                  " Показываем нумерацию строк
     set encoding=utf-8            " character encoding used inside Vim.
     set fileencodings=utf8,cp1251 " Возможные кодировки файлов и последовательность определения
     set wildmenu " Саджест по <tab> в командной строке
@@ -104,18 +103,18 @@
                  " the possible matches are shown just above the command line, with the
                  " first match highlighted (overwriting the status line, if there is
                  " one).
-    set title " window title
-              " the title of the window will be set to the value of 'titlestring'
-              " (if it is not empty), or to: filename [+=-] (path) - VIM
-    set showcmd " Show (partial) command in the last line of the screen
-                " Set this option off if your terminal is slow.
-                " In Visual mode the size of the selected area is shown:
-                " - When selecting characters within a line, the number of characters.
-                "   If the number of bytes is different it is also displayed: "2-6"
-                "   means two characters and six bytes.
-                " - When selecting more than one line, the number of lines.
-                " - When selecting a block, the size in screen characters:
-                "   {lines}x{columns}.
+    set title    " window title
+                 " the title of the window will be set to the value of 'titlestring'
+                 " (if it is not empty), or to: filename [+=-] (path) - VIM
+    set showcmd  " Show (partial) command in the last line of the screen
+                 " Set this option off if your terminal is slow.
+                 " In Visual mode the size of the selected area is shown:
+                 " - When selecting characters within a line, the number of characters.
+                 "   If the number of bytes is different it is also displayed: "2-6"
+                 "   means two characters and six bytes.
+                 " - When selecting more than one line, the number of lines.
+                 " - When selecting a block, the size in screen characters:
+                 "   {lines}x{columns}.
     " set scrolljump=5
     " set scrolloff=3
     set scrolloff=999       " focus mode like in Writer app http://www.iawriter.com/
@@ -123,8 +122,9 @@
     set list                " display unprintable characters
     set wrap                " Включаем перенос строк (http://vimcasts.org/episodes/soft-wrapping-text/)
     if version >= 703
-        set colorcolumn=120  " Подсвечиваем эти столбцы
+        set colorcolumn=120 " Подсвечиваем эти столбцы
     endif
+    set formatoptions-=o    " dont continue comments when pushing o/O
     set linebreak           " Перенос не разрывая слов
     set autoindent          " Копирует отступ от предыдущей строки
     set smartindent         " Включаем 'умную' автоматическую расстановку отступов
@@ -141,7 +141,7 @@
     set splitbelow          " новый сплит будет ниже текущего :sp
     set splitright          " новый сплит будет правее текущего :vsp
     set shortmess+=I        " не показывать intro screen
-    set mouseshape=s:udsizing,m:no " mouse turn to a sizing arrow over the status lines
+    set mouseshape=s:udsizing,m:no " turn to a sizing arrow over the status lines
 
     " Не бибикать!
         set visualbell " Use visual bell instead of beeping
@@ -151,7 +151,6 @@
         if has('multi_byte')
             if version >= 700
                 set listchars=tab:▸\ ,trail:·,extends:→,precedes:←,nbsp:×
-                " set listchars=tab:▸\ ,eol:¬ " Textmate like
             else
                 set listchars=tab:»\ ,trail:·,extends:>,precedes:<,nbsp:_
             endif
@@ -165,46 +164,28 @@
 
     " Приводим в порядок status line
 
-        " Func for word count in status line
-            " http://stackoverflow.com/questions/114431/fast-word-count-function-in-vim
-            "function! GetWordCount()
-                "let s:old_status = v:statusmsg
-                "exe "silent normal g\<c-g>"
-                "if v:statusmsg != '--No lines in buffer--'
-                    "let s:word_count = str2nr(split(v:statusmsg)[11]) . " words"
-                "else
-                    "let s:word_count = ""
-                "endif
-                "let v:statusmsg = s:old_status
-                "return s:word_count
-            "endfunction
-
-        " Filesize for status line
-            function! FileSize()
-                let bytes = getfsize(expand("%:p"))
-                if bytes <= 0
-                    return ""
-                endif
-                if bytes < 1024
-                    return bytes . "B"
-                else
-                    return (bytes / 1024) . "K"
-                endif
-            endfunction
+        function! FileSize()
+            let bytes = getfsize(expand("%:p"))
+            if bytes <= 0
+                return ""
+            endif
+            if bytes < 1024
+                return bytes . "B"
+            else
+                return (bytes / 1024) . "K"
+            endif
+        endfunction
 
         function! CurDir()
             let curdir = substitute(getcwd(), '/Users/miripiruni', "~", "g")
             return curdir
         endfunction
 
-        " see https://github.com/vgod/vimrc/blob/master/vimrc
         set laststatus=2
         set statusline=\ 
-        set statusline+=%<                   " where truncate if line too long
-        set statusline+=%n:\                   " buffer number
+        set statusline+=%n:\                 " buffer number
         set statusline+=%t                   " filename with full path
         set statusline+=\ \ 
-        " set statusline+=%=                 " separation between left and right
         set statusline+=%{&paste?'[paste]\ ':''}
         set statusline+=%{&fileencoding}
         set statusline+=\ \ %Y               " type of file
@@ -212,7 +193,7 @@
         set statusline+=\ \ %3.9(%l/%L%)     " line / total lines
         set statusline+=\ \ %2.3p%%          " percentage through file in lines
         set statusline+=\ \ %{FileSize()}
-        "set statusline+=\ \ %{GetWordCount()}
+        set statusline+=%<                   " where truncate if line too long
         set statusline+=\ \ CurDir:%{CurDir()}
 
 
@@ -244,20 +225,11 @@
         endif
 
     " Фолдинг
-        " zf - создает новую складку (актуально при foldmethod=manual).
-        " zd - удаляет складку, на которой в данный момент находится курсор.
-        " zD - рекурсивно удаляет все складки под курсором.
-        " zE - удаляет все складки в окне.
-        " zo - открыть текущую складку.
-        " zO - открыть текущую складку и все складки внутри нее.
-        " zc - скрыть текущую складку.
-        " zС - скрыть текущую складку и все складки внутри нее.
+        " Всё, что нужно знать для начала:
         " za - скрыть/открыть текущую складку.
-        " zA - скрыть/открыть текущую складку и все складки внутри нее.
-        " {zr, zm} - {увеличивает, уменьшает} на 1 уровень сокрытия складок.
         " {zR, zM} - {открыть, скрыть} все складки.
         set foldcolumn=0        " Ширина строки где располагается фолдинг
-        set foldmethod=manual   " Фолдинг по отступам
+        set foldmethod=indent   " Фолдинг по отступам
         set foldnestmax=10      " Глубина фолдинга 10 уровней
         set nofoldenable        " Не фолдить по умолчанию
         set foldlevel=1         " This is just what i use
@@ -273,10 +245,9 @@
 
 " Search
     set incsearch   " При поиске перескакивать на найденный текст в процессе набора строки
-    set showmatch
     set hlsearch    " Включаем подсветку выражения, которое ищется в тексте
     set ignorecase  " Игнорировать регистр букв при поиске
-    set smartcase
+    set smartcase   " Override the 'ignorecase' if the search pattern contains upper case characters
     set gdefault    " Включает флаг g в командах замены, типа :s/a/b/
 
 
@@ -324,8 +295,11 @@
         " бешеный реформат кода
         set pastetoggle=<Leader>p
 
+
     " ,n
-        " Toggle line numbers type http://stackoverflow.com/questions/4387210/vim-how-to-map-two-tasks-under-one-shortcut-key
+        " Toggle type of line numbers
+        " http://stackoverflow.com/questions/4387210/vim-how-to-map-two-tasks-under-one-shortcut-key
+        " vim 7.3 required
         let g:relativenumber = 0
         function! ToogleRelativeNumber()
           if g:relativenumber == 0
@@ -389,6 +363,8 @@
         inoremap <Right> <NOP>
         noremap <Up> <NOP>
         noremap <Down> <NOP>
+        noremap <Left> <NOP>
+        noremap <Right> <NOP>
         " Позволяем передвигаться с помощью hjkl в Insert mode зажав <Ctrl>
         imap <C-h> <C-o>h
         imap <C-j> <C-o>j
@@ -432,17 +408,23 @@
         nnoremap K h/[^ ]<cr>"zd$jyyP^v$h"zpJk:s/\v +$//<cr>:noh<cr>j^
 
     " It's 2011. Don't skip wrap lines
+        " Еще раз и попонятнее:
+        " если строка n длиная и не влезла в окно — она перенесется на
+        " следующую (wrap on). Шокткаты ниже нужны, чтобы попасть
+        " на каждую псевдострочку этой врапнутой строки.
         noremap j gj
         noremap k gk
 
     " <Return> toggle command mode
+        " С таким мапом возникают проблемы когда нужно грепнуть и перемещаться
+        " по файлам в результатах поиска нажимая энтер.
         "nmap <Return> :
 
     " gf открывает фойл под курсором в вертикальном сплите
         " (по дефолту gf открывает файл в том же буфере)
         nmap gf :vertical wincmd f<CR>
 
-    " buffer
+    " Создаем пустой сплит относительно текущего
         nmap <Leader><left>  :leftabove  vnew<CR>
         nmap <Leader><right> :rightbelow vnew<CR>
         nmap <Leader><up>    :leftabove  new<CR>
@@ -461,11 +443,11 @@
 
 " Environment
     set history=1000 " store lots of :cmdline history
-    set formatoptions-=o "dont continue comments when pushing o/O
     cmap w!! %!sudo tee > /dev/null % " save file with root permissions"
 
     " Backspacing settings
-        " start     allow backspacing over the start of insert; CTRL-W and CTRL-U stop once at the start of insert.
+        " start     allow backspacing over the start of insert;
+        "           CTRL-W and CTRL-U stop once at the start of insert.
         " indent    allow backspacing over autoindent
         " eol       allow backspacing over line breaks (join lines)
         set backspace=indent,eol,start
@@ -537,11 +519,6 @@
           \    'extends' : 'html',
           \  },
           \}
-
-    " NERDCommenter
-        "nmap <C-/> <Leader>c<space>
-        "vmap <C-/> <Leader>cc
-        "imap <C-/> <c-o><plug>NERDCommenterToggle
 
     " UltiSnips
         let g:UltiSnipsExpandTrigger="<tab>"

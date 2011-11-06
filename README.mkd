@@ -71,7 +71,7 @@ Create new empty split:
 
 `Backspace` toggle NerdTree
 
-Отключаются клавиши стрелок для передвижения курсора. Цель быстрее отвыкнуть от перемещения руки к стрелочкам. Warning: nightmare mode! Но позволяем передвигаться с помощью `hjkl` в Insert mode зажав `Ctrl`
+Disable the arrow keys. Goal quickly grow out of the hands to move the pointers. Warning: nightmare mode! You can move through `hjkl` in Insert mode pressing `Ctrl`.
 
 Move lines:
 
@@ -125,7 +125,7 @@ Move lines:
 
 `Backspace` Toggle NerdTree
 
-Disable the arrow keys. Goal quickly grow out of the hands to move the pointers. Warning: nightmare mode! You can move through `hjkl` in Insert mode pressing `Ctrl`.
+Отключаются клавиши стрелок для передвижения курсора. Цель быстрее отвыкнуть от перемещения руки к стрелочкам. Warning: nightmare mode! Но позволяем передвигаться с помощью `hjkl` в Insert mode зажав `Ctrl`
 
 Перемещение строк:
 

@@ -261,6 +261,7 @@
         set foldnestmax=10      " Глубина фолдинга 10 уровней
         set nofoldenable        " Не фолдить по умолчанию
         set foldlevel=1         " This is just what i use
+        set fillchars="fold: "  " remove the extrafills --------
 
     " Не показывать парную скобку
         let loaded_matchparen=1 " перестает прыгать на парную скобку, показывая где она. +100 к скорости

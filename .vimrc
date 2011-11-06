@@ -263,7 +263,7 @@
         set foldlevel=1         " This is just what i use
 
     " Не показывать парную скобку
-        let loaded_matchparen=1 " перестает прыгать на парную скобку, показывая где она. +100 к скокости
+        let loaded_matchparen=1 " перестает прыгать на парную скобку, показывая где она. +100 к скорости
         set noshowmatch " Не показывать парные <> в HTML
 
 

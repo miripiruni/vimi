@@ -20,7 +20,7 @@
     "
     " Libs
         " For FuzzyFinder:
-        "Bundle 'L9'
+        Bundle 'L9'
     " Interface
         Bundle 'git://github.com/altercation/vim-colors-solarized.git'
         Bundle 'git://github.com/scrooloose/nerdtree.git'
@@ -46,7 +46,7 @@
         "Bundle 'git://github.com/edsono/vim-matchit.git'
         Bundle 'git://github.com/sjl/threesome.vim.git'
         "Bundle 'git://github.com/chrismetcalf/vim-yankring.git'
-        "Bundle 'git://github.com/slack/vim-fuzzyfinder.git'
+        Bundle 'git://github.com/slack/vim-fuzzyfinder.git'
         Bundle 'git://github.com/vim-scripts/vimwiki.git'
     " Lua
         "Bundle 'git://github.com/vim-scripts/lua.vim.git'
@@ -256,7 +256,7 @@
         " zA - скрыть/открыть текущую складку и все складки внутри нее.
         " {zr, zm} - {увеличивает, уменьшает} на 1 уровень сокрытия складок.
         " {zR, zM} - {открыть, скрыть} все складки.
-        set foldcolumn=2        " Ширина строки где располагается фолдинг
+        set foldcolumn=0        " Ширина строки где располагается фолдинг
         set foldmethod=manual   " Фолдинг по отступам
         set foldnestmax=10      " Глубина фолдинга 10 уровней
         set nofoldenable        " Не фолдить по умолчанию
@@ -305,7 +305,7 @@
         " Поиск и замена во всех открытых буферах http://vim.wikia.com/wiki/VimTip382
         function! Replace()
             let s:word = input("Replace " . expand('<cword>') . " with:")
-            :exe 'bufdo! %s/\<' . expand('<cword>') . '\>/' . s:word . '/ge'
+            :exe 'bufdo! %s/\<' . expand('<cword>') . '\>/' . s:word . '/gce'
             :unlet! s:word
         endfunction
         map <Leader>r :call Replace()<CR>

@@ -177,7 +177,7 @@
         endfunction
 
         function! CurDir()
-            let curdir = substitute(getcwd(), '/Users/miripiruni', "~", "g")
+            let curdir = substitute(expand('%:p'), '/home/miripiruni', '~', 'g')
             return curdir
         endfunction
 
@@ -228,6 +228,24 @@
         " Всё, что нужно знать для начала:
         " za - скрыть/открыть текущую складку.
         " {zR, zM} - {открыть, скрыть} все складки.
+        " from https://github.com/sjl/dotfiles/blob/master/vim/.vimrc
+        function! MyFoldText()
+            let line = getline(v:foldstart)
+
+            let nucolwidth = &fdc + &number * &numberwidth
+            let windowwidth = winwidth(0) - nucolwidth - 3
+            let foldedlinecount = v:foldend - v:foldstart
+
+            " expand tabs into spaces
+            let onetab = strpart(' ', 0, &tabstop)
+            let line = substitute(line, '\t', onetab, 'g')
+
+            let line = strpart(line, 0, windowwidth - 2 - len(foldedlinecount))
+            let fillcharcount = windowwidth - len(line) - len(foldedlinecount)
+            return line . '…' . repeat(" ",fillcharcount) . foldedlinecount . '…' . ' '
+        endfunction
+        set foldtext=MyFoldText()
+
         set foldcolumn=0        " Ширина строки где располагается фолдинг
         set foldmethod=indent   " Фолдинг по отступам
         set foldnestmax=10      " Глубина фолдинга 10 уровней

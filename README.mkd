@@ -16,12 +16,10 @@ Environment
 How to install Vimi setup
 --------------
 
-0. Delete or remove current ~/.vim и ~/.vimrc
-1. `cd ~; git clone git://github.com/miripiruni/vimi.git vimi; ln -s vimi/.vimrc .vimrc; ln -s vimi/.vim .vim`
-2. `git clone git://github.com/gmarik/vundle.git ~/vimi/.vim/bundle/vundle`
-3. Start vim and edit list of plugins in .vimrc
-4. In vim enter `:BundleInstall`
-5. Restart vim
+0. Delete or move current ~/.vim и ~/.vimrc
+1. `cd ~; git clone git://github.com/miripiruni/vimi.git vimi; ln -s vimi/.vimrc .vimrc; ln -s vimi/.vim .vim; git clone git://github.com/gmarik/vundle.git ~/vimi/.vim/bundle/vundle`
+2. In vim type `:BundleInstall`
+3. Restart vim
 
 
 Screenshot

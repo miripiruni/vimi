@@ -7,7 +7,9 @@ Please address bugs and your suggestions to [Issues](http://github.com/miripirun
 Environment
 ------------
 
-* OSX 10.6.8
+Recommend:
+
+* Mac OS X 10.6.8
 * [iTerm2](http://www.iterm2.com/#/section/home)
 * [Solarized](https://github.com/altercation/solarized/blob/master/iterm2-colors-solarized/Solarized%20Dark.itermcolors)
 * [Vim](http://vim.org/)
@@ -41,6 +43,12 @@ I hold the fundamental rule is not to press the F-keys. First, on my mac they ar
 `,n` toggle type of line numbers: none/relative/absolute (Vim 7.3 required)
 
 `,v` open .vimrc in new tab
+
+`,bl` show buffers
+
+`,bp` prev buffer
+
+`,bn` next buffer
 
 Create new empty split:
 
@@ -95,6 +103,12 @@ Move lines:
 `,n` переключает тип нумерации строк: абсолютный/относительный/нет
 
 `,v` открыть .vimrc в новой табе. Кстати, если .vimrc сохранить все изменения вступтят в силу сразу же.
+
+`,bl` показывает список буферов и ожидает ввода номера буфера для его открытия
+
+`,bp` предыдущий буфер
+
+`,bn` следующий буфер
 
 Создать новый сплит:
 

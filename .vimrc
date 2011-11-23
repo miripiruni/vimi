@@ -58,6 +58,7 @@
         Bundle 'git://github.com/hokaccha/vim-html5validator.git'
         "Bundle 'git://github.com/tyru/operator-html-escape.vim.git'
         Bundle 'git://github.com/tpope/vim-haml.git'
+        Bundle 'git://github.com/gregsexton/MatchTag.git'
     " CSS/LESS
         Bundle 'git://github.com/hail2u/vim-css3-syntax.git'
         Bundle 'git://github.com/skammer/vim-css-color.git'
@@ -87,7 +88,7 @@
     " :BundleList          - list configured bundles
     " :BundleInstall(!)    - install(update) bundles
     " :BundleSearch(!) foo - search(or refresh cache first) for foo
-    " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+    " :BundleClean(!)      - confirm(or auto-ap prove) removal of unused bundles
     " see :h vundle for more details or wiki for FAQ
 
 
@@ -118,12 +119,12 @@
     " set scrolljump=5
     " set scrolloff=3
     set scrolloff=999       " focus mode like in Writer app http://www.iawriter.com/
-    set showtabline=2       " Показывать табы всегда
+    set showtabline=1       " Показывать табы всегда
     set list                " display unprintable characters
     set wrap                " Включаем перенос строк (http://vimcasts.org/episodes/soft-wrapping-text/)
     if version >= 703
-        set colorcolumn=120 " Подсвечиваем эти столбцы
-    endif
+        set colorcolumn=80 " Подсвечиваем 80 столбец
+    end
     set formatoptions-=o    " dont continue comments when pushing o/O
     set linebreak           " Перенос не разрывая слов
     set autoindent          " Копирует отступ от предыдущей строки
@@ -142,6 +143,9 @@
     set splitright          " новый сплит будет правее текущего :vsp
     set shortmess+=I        " не показывать intro screen
     set mouseshape=s:udsizing,m:no " turn to a sizing arrow over the status lines
+    set mousehide " Hide the mouse when typing text
+
+    set hidden " this allows to edit several files in the same time without having to save them
 
     " Не бибикать!
         set visualbell " Use visual bell instead of beeping
@@ -370,8 +374,8 @@
         nnoremap C c$
 
     " Pasting with correct indention
-        nmap p p=`]
-        nmap P P=`[
+        "nmap p p=`]
+        "nmap P P=`[
 
     " Disable <Arrow keys>
         " Warning: nightmare mode!
@@ -457,6 +461,16 @@
 
     " Fix Trailing White Space
         map <leader>ts :%s/\s\+$//e<CR>
+
+
+    " ,bl show buffers
+        nmap <Leader>bl :ls<cr>:b
+
+    " ,bp prev buffer
+        nmap <Leader>bp :bp<cr>
+
+    " ,bn next buffer
+        nmap <Leader>bn :bn<cr>
 
 
 " Environment

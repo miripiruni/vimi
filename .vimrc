@@ -64,6 +64,7 @@
         Bundle 'git://github.com/skammer/vim-css-color.git'
         Bundle 'git://github.com/groenewege/vim-less.git'
         Bundle 'git://github.com/miripiruni/vim-better-css-indent.git'
+        Bundle 'git://github.com/batsuev/csscomb-vim.git'
     " JavaScript
         Bundle 'git://github.com/pangloss/vim-javascript.git'
         Bundle 'git://github.com/itspriddle/vim-jquery.git'

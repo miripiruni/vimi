@@ -64,7 +64,7 @@
         Bundle 'git://github.com/skammer/vim-css-color.git'
         Bundle 'git://github.com/groenewege/vim-less.git'
         Bundle 'git://github.com/miripiruni/vim-better-css-indent.git'
-        Bundle 'git://github.com/batsuev/csscomb-vim.git'
+        Bundle 'git://github.com/miripiruni/CSScomb-for-Vim.git'
     " JavaScript
         Bundle 'git://github.com/pangloss/vim-javascript.git'
         Bundle 'git://github.com/itspriddle/vim-jquery.git'
@@ -195,6 +195,7 @@
         set statusline=\ 
         set statusline+=%n:\                 " buffer number
         set statusline+=%t                   " filename with full path
+        set statusline+=%m                   " modified flag
         set statusline+=\ \ 
         set statusline+=%{&paste?'[paste]\ ':''}
         set statusline+=%{&fileencoding}

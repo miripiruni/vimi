@@ -8,7 +8,7 @@
     set nocompatible " be iMproved
     filetype off     " required!
 
-    set rtp+=~/vimi/.vim/bundle/vundle/
+    set rtp+=~/.vimi/.vim/bundle/vundle/
     call vundle#rc()
 
     " let Vundle manage Vundle
@@ -492,8 +492,8 @@
         set backspace=indent,eol,start
 
     " Backup и swp файлы
-        set backupdir=~/vimi/bac,.,/tmp " Директория для backup файлов
-        set directory=~/vimi/swp,.,/tmp " Директория для swp файлов
+        set backupdir=~/.vimi/bac,.,/tmp " Директория для backup файлов
+        set directory=~/.vimi/swp,.,/tmp " Директория для swp файлов
 
     " Загрузка предыдущей сессии
         set viminfo='10,\"100,:20,%,n~/.viminfo

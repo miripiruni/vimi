@@ -18,7 +18,7 @@ Recommend:
 How to install Vimi setup
 --------------
 
-0. Delete or move current ~/.vim и ~/.vimrc
+0. Delete or move current ~/.vim and ~/.vimrc
 1. `cd ~; git clone git://github.com/miripiruni/vimi.git .vimi; ln -s .vimi/.vimrc .vimrc; ln -s .vimi/.vim .vim; git clone git://github.com/gmarik/vundle.git ~/.vimi/.vim/bundle/vundle`
 2. Start Vim and type `:BundleInstall`
 3. Restart vim

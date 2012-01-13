@@ -39,11 +39,17 @@ I hold the fundamental rule is not to press the F-keys. First, on my mac they ar
 
 `,f` recursive search in current dir by word under cursor
 
+`,s` shortcut for :%s//<left> you don't need type this any more :)
+
 `,p` autoformat toggle for insert mode
 
 `,n` toggle type of line numbers: none/relative/absolute (Vim 7.3 required)
 
 `,v` open .vimrc in new tab
+
+`,u` convert current word to upper case
+
+`,y` copy to first register all current line exept \s in begining and end. Useful for dragging some text constructions.
 
 `,bl` show buffers
 
@@ -87,6 +93,8 @@ Move lines:
 
 `:w!!` saves the file as if you opened it with sudo
 
+`Ctrl+a` and `Ctrl+e` in command mode allow to jump at start and end of line
+
 
 Горячие кнопки
 --------
@@ -99,11 +107,20 @@ Move lines:
 
 `,f` грепает в текущей директории по слову, на котором стоит курсор
 
+`,s` шорткат для :%s//<left> Вам не нужно будет печатать этого и курсор
+установится между слешами.
+
 `,p` тогглит автоформатирование в режиме для вставки текста. Очень часто автоформатер мешает и его нужно выключать на время.
 
 `,n` переключает тип нумерации строк: абсолютный/относительный/нет
 
 `,v` открыть .vimrc в новой табе. Кстати, если .vimrc сохранить все изменения вступтят в силу сразу же.
+
+`,u` конвертирует слово под курсором в uppercase
+
+`,y` удаляет строку, предварительно скопировав в последний буфер все содержимое
+строки, кроме \s в начале и в конце. Полезно для захвата конструкций и
+дальнейшую их вклейку в другие обертки.
 
 `,bl` показывает список буферов и ожидает ввода номера буфера для его открытия
 
@@ -146,4 +163,7 @@ Move lines:
 * `Ctrl-Shift-j` вниз
 
 `:w!!` сохраняет файл как если бы вы открыли его с sudo
+
+Ctrl+a` и `Ctrl+e` в коммандном режиме позволяет переставлять курсор в начало и
+в конец строки, как так же как это можно делать в терминале.
 

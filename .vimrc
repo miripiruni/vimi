@@ -382,10 +382,8 @@
         vmap <C-S-k> xkP'[V']
         vmap <C-S-j> xp'[V']
 
-    " Мапим {действие} от курсора до конца строки
+    " Y янкает от курсора и до конца строки. На манер страндартных D и С.
         nnoremap Y y$
-        nnoremap D d$
-        nnoremap C c$
 
     " Pasting with correct indention
         "nmap p p=`]

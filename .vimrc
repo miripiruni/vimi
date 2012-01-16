@@ -46,7 +46,7 @@
         "Bundle 'git://github.com/edsono/vim-matchit.git'
         Bundle 'git://github.com/sjl/threesome.vim.git'
         "Bundle 'git://github.com/chrismetcalf/vim-yankring.git'
-        Bundle 'git://github.com/slack/vim-fuzzyfinder.git'
+        "Bundle 'git://github.com/slack/vim-fuzzyfinder.git'
         Bundle 'git://github.com/vim-scripts/vimwiki.git'
     " Lua
         "Bundle 'git://github.com/vim-scripts/lua.vim.git'
@@ -104,6 +104,7 @@
 
     set encoding=utf-8            " character encoding used inside Vim.
     set fileencodings=utf8,cp1251 " Возможные кодировки файлов и последовательность определения
+    set wildmode=list:longest,full " Автодополнение на манер zsh
     set wildmenu " Саджест по <tab> в командной строке
                  " When 'wildmenu' is on, command-line completion operates in an enhanced
                  " mode.  On pressing 'wildchar' (usually <Tab>) to invoke completion,

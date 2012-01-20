@@ -46,7 +46,7 @@
         "Bundle 'git://github.com/edsono/vim-matchit.git'
         Bundle 'git://github.com/sjl/threesome.vim.git'
         "Bundle 'git://github.com/chrismetcalf/vim-yankring.git'
-        Bundle 'git://github.com/slack/vim-fuzzyfinder.git'
+        "Bundle 'git://github.com/slack/vim-fuzzyfinder.git'
         Bundle 'git://github.com/vim-scripts/vimwiki.git'
     " Lua
         "Bundle 'git://github.com/vim-scripts/lua.vim.git'
@@ -104,12 +104,16 @@
 
     set encoding=utf-8            " character encoding used inside Vim.
     set fileencodings=utf8,cp1251 " Возможные кодировки файлов и последовательность определения
+    set wildmode=list:longest,full " Автодополнение на манер zsh
     set wildmenu " Саджест по <tab> в командной строке
                  " When 'wildmenu' is on, command-line completion operates in an enhanced
                  " mode.  On pressing 'wildchar' (usually <Tab>) to invoke completion,
                  " the possible matches are shown just above the command line, with the
                  " first match highlighted (overwriting the status line, if there is
                  " one).
+    set wildignore+=.hg,.git,.svn " Version control
+    set wildignore+=*.DS_Store    " OSX bullshit
+    set wildignore+=*.pyc         " Python byte code
     set title    " window title
                  " the title of the window will be set to the value of 'titlestring'
                  " (if it is not empty), or to: filename [+=-] (path) - VIM
@@ -131,6 +135,7 @@
     if version >= 703
         set colorcolumn=80 " Подсвечиваем 80 столбец
     end
+    set textwidth=80
     set formatoptions-=o    " dont continue comments when pushing o/O
     set linebreak           " Перенос не разрывая слов
     set autoindent          " Копирует отступ от предыдущей строки
@@ -160,7 +165,7 @@
     " Символ табуляции и конца строки
         if has('multi_byte')
             if version >= 700
-                set listchars=tab:▸\ ,trail:·,extends:→,precedes:←,nbsp:×
+                set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:×
             else
                 set listchars=tab:»\ ,trail:·,extends:>,precedes:<,nbsp:_
             endif
@@ -277,7 +282,7 @@
     set hlsearch    " Включаем подсветку выражения, которое ищется в тексте
     set ignorecase  " Игнорировать регистр букв при поиске
     set smartcase   " Override the 'ignorecase' if the search pattern contains upper case characters
-    set gdefault    " Включает флаг g в командах замены, типа :s/a/b/
+    set gdefault    " Включает флаг g в командах замены, типа :%s/a/b/
 
 
 
@@ -367,6 +372,9 @@
         " грепает в текущей директории по слову, на котором стоит курсор
         map <Leader>f :execute "Ack " . expand("<cword>") <Bar> cw<CR>
 
+    " ,s
+        nnoremap <leader>s :%s//<left>
+
     " Перемещение строк
         " переместить одну строку
         nmap <C-S-k> ddkP
@@ -375,10 +383,8 @@
         vmap <C-S-k> xkP'[V']
         vmap <C-S-j> xp'[V']
 
-    " Мапим {действие} от курсора до конца строки
+    " Y янкает от курсора и до конца строки. На манер страндартных D и С.
         nnoremap Y y$
-        nnoremap D d$
-        nnoremap C c$
 
     " Pasting with correct indention
         "nmap p p=`]
@@ -436,7 +442,7 @@
         nnoremap K <nop>
         nnoremap K h/[^ ]<cr>"zd$jyyP^v$h"zpJk:s/\v +$//<cr>:noh<cr>j^
 
-    " It's 2011. Don't skip wrap lines
+    " Don't skip wrap lines
         " Еще раз и попонятнее:
         " если строка n длиная и не влезла в окно — она перенесется на
         " следующую (wrap on). Шокткаты ниже нужны, чтобы попасть
@@ -459,6 +465,10 @@
         nmap <Leader><up>    :leftabove  new<CR>
         nmap <Leader><down>  :rightbelow new<CR>
 
+    " Утащить содержимое индентированной строки, но не захватив с собой
+    " начальные и конечные \s
+        nnoremap ,y ^yg_"_dd
+
     " ,c
         " camelCase => camel_case
         vnoremap <silent> <Leader>c :s/\v\C(([a-z]+)([A-Z]))/\2_\l\3/g<CR>
@@ -479,10 +489,20 @@
     " ,bn next buffer
         nmap <Leader>bn :bn<cr>
 
+    " ,u Change case
+        nnoremap <Leader>u gUiw
+        inoremap <Leader>u <esc>gUiwea
+
+    " В коммандном режиме разрешить прыгать в конец и начало строки,
+    " как в консоли
+        cnoremap <c-a> <home>
+        cnoremap <c-e> <end>
+
 
 " Environment
     set history=1000 " store lots of :cmdline history
-    cmap w!! %!sudo tee > /dev/null % " save file with root permissions"
+    "cmap w!! %!sudo tee > /dev/null % " save file with root permissions"
+    command! W exec 'w !sudo tee % > /dev/null' | e!
 
     " Backspacing settings
         " start     allow backspacing over the start of insert;
@@ -492,8 +512,8 @@
         set backspace=indent,eol,start
 
     " Backup и swp файлы
-        set backupdir=~/.vimi/bac,/tmp " Директория для backup файлов
-        set directory=~/.vimi/swp,/tmp " Директория для swp файлов
+        set backupdir=~/.vimi/bac//,/tmp " Директория для backup файлов
+        set directory=~/.vimi/swp//,/tmp " Директория для swp файлов
 
     " Загрузка предыдущей сессии
         set viminfo='10,\"100,:20,%,n~/.viminfo
@@ -516,11 +536,15 @@
         " autocmd VimEnter * nested if argc() == 0 && filereadable($HOME . "/.vim/Session.vim") |
         "     \ execute "source " . $HOME . "/.vim/Session.vim"
 
-    " Save on losing focus
-        autocmd FocusLost * :wa 
-
     " Auto change the directory to the current file I'm working on
         autocmd BufEnter * lcd %:p:h
+
+    " Актуально только для MacVim
+        " Save on losing focus
+            autocmd FocusLost * :wa
+
+        " Resize splits when the window is resized
+            au VimResized * exe "normal! \<c-w>="
 
 
 

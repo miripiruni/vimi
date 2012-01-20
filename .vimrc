@@ -553,6 +553,7 @@
         let NERDTreeKeepTreeInNewTab=0
         let NERDTreeMinimalUI=1 " Disables display of the 'Bookmarks' label and 'Press ? for help' text.
         let NERDTreeDirArrows=1 " Tells the NERD tree to use arrows instead of + ~ chars when displaying directories.
+        let NERDTreeBookmarksFile= $HOME . '/.vim/.NERDTreeBookmarks'
 
     " Zen Coding
         let g:user_zen_settings = {

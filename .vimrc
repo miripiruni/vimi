@@ -192,8 +192,7 @@
         endfunction
 
         function! CurDir()
-            let curdir = substitute(expand('%:p'), '/home/miripiruni', '~', 'g')
-            return curdir
+            return expand('%:p:~')
         endfunction
 
         set laststatus=2

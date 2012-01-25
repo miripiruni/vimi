@@ -207,7 +207,7 @@
         set statusline+=\ \ %Y               " type of file
         set statusline+=\ %3.3(%c%)          " column number
         set statusline+=\ \ %3.9(%l/%L%)     " line / total lines
-        set statusline+=\ \ %2.3p%%          " percentage through file in lines
+        "set statusline+=\ \ %2.3p%%          " percentage through file in lines
         set statusline+=\ \ %{FileSize()}
         set statusline+=%<                   " where truncate if line too long
         set statusline+=\ \ CurDir:%{CurDir()}
@@ -316,8 +316,8 @@
         endfunction
         map <Leader>r :call Replace()<CR>
 
-    " <Esc>
-        " Clear the search highlight by pressing ENTER when in Normal mode (Typing commands)
+    " <Esc><Esc>
+        " Clear the search highlight in Normal mode
         nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
 
     " < >

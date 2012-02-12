@@ -215,10 +215,6 @@
 
 
 
-    " Show the line and column number of the cursor position
-        set ruler
-        set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%)
-
     " Создаем меню с кодировками
         menu Encoding.UTF-8 :e ++enc=utf8 <CR>
         menu Encoding.Windows-1251 :e ++enc=cp1251<CR>

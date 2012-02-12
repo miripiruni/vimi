@@ -484,7 +484,7 @@
     " ,bn next buffer
         nmap <Leader>bn :bn<cr>
 
-    " ,u Change case
+    " ,u Change case to uppercase
         nnoremap <Leader>u gUiw
         inoremap <Leader>u <esc>gUiwea
 

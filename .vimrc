@@ -103,7 +103,7 @@
                                   " где 1 — номер строки.
 
     set encoding=utf-8            " character encoding used inside Vim.
-    set fileencodings=utf8,cp1251 " Возможные кодировки файлов и последовательность определения
+    set fileencodings=utf-8,cp1251 " Возможные кодировки файлов и последовательность определения
     set wildmode=list:longest,full " Автодополнение на манер zsh
     set wildmenu " Саджест по <tab> в командной строке
                  " When 'wildmenu' is on, command-line completion operates in an enhanced
@@ -454,7 +454,7 @@
         " по файлам в результатах поиска нажимая энтер.
         "nmap <Return> :
 
-    " gf открывает фойл под курсором в вертикальном сплите
+    " gf открывает файл под курсором в вертикальном сплите
         " (по дефолту gf открывает файл в том же буфере)
         nmap gf :vertical wincmd f<CR>
 

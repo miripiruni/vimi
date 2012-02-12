@@ -20,7 +20,7 @@
     "
     " Libs
         " For FuzzyFinder:
-        Bundle 'L9'
+        "Bundle 'L9'
     " Interface
         Bundle 'git://github.com/altercation/vim-colors-solarized.git'
         Bundle 'git://github.com/scrooloose/nerdtree.git'
@@ -129,7 +129,7 @@
     " set scrolljump=5
     " set scrolloff=3
     set scrolloff=999       " focus mode like in Writer app http://www.iawriter.com/
-    set showtabline=1       " Показывать табы всегда
+    set showtabline=1       " Показывать вкладки табов только когда их больше одной
     set list                " display unprintable characters
     set wrap                " Включаем перенос строк (http://vimcasts.org/episodes/soft-wrapping-text/)
     if version >= 703

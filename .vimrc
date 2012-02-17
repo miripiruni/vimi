@@ -512,6 +512,12 @@
     " Bind :Q to :q
         command! Q q
 
+    " {<CR>
+        " auto complete {} indent and position the cursor in the middle line
+        inoremap {<CR> {<CR>}<Esc>O
+        inoremap (<CR> (<CR>)<Esc>O
+        inoremap [<CR> [<CR>]<Esc>O
+
 
 
 

@@ -43,7 +43,7 @@ I hold the fundamental rule is not to press the F-keys. First, on my mac they ar
 
 `,p` autoformat toggle for insert mode
 
-`,n` toggle type of line numbers: none/relative/absolute (Vim 7.3 required)
+`,nm` toggle type of line numbers: none/relative/absolute (Vim 7.3 required)
 
 `,v` open .vimrc in new tab
 
@@ -55,7 +55,7 @@ I hold the fundamental rule is not to press the F-keys. First, on my mac they ar
 
 `,w` shortcut for Ctrl+w w for jumpping to next split
 
-`,n` создать новый документ с введенным вами именем в той же директории, что и текущий открытый документ
+`,n` edit another file in the same directory as the current file uses expression to extract path from current file's path
 
 `,bl` show buffers
 
@@ -122,7 +122,7 @@ Move lines:
 
 `,p` тогглит автоформатирование в режиме для вставки текста. Очень часто автоформатер мешает и его нужно выключать на время.
 
-`,n` переключает тип нумерации строк: абсолютный/относительный/нет
+`,nm` переключает тип нумерации строк: абсолютный/относительный/нет
 
 `,v` открыть .vimrc в новой табе. Кстати, если .vimrc сохранить все изменения вступтят в силу сразу же.
 
@@ -136,7 +136,7 @@ Move lines:
 
 `,w` сокращение для Ctrl+w w для перепрыгивания в следующий сплит
 
-`,n` edit another file in the same directory as the current file uses expression to extract path from current file's path
+`,n` создать новый документ с введенным вами именем в той же директории, что и текущий открытый документ
 
 `,bl` показывает список буферов и ожидает ввода номера буфера для его открытия
 

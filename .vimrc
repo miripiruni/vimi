@@ -325,7 +325,7 @@
         set pastetoggle=<Leader>p
 
 
-    " ,n
+    " ,nm
         " Toggle type of line numbers
         " http://stackoverflow.com/questions/4387210/vim-how-to-map-two-tasks-under-one-shortcut-key
         " vim 7.3 required

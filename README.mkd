@@ -51,6 +51,12 @@ I hold the fundamental rule is not to press the F-keys. First, on my mac they ar
 
 `,y` copy to first register all current line exept \s in begining and end. Useful for dragging some text constructions.
 
+`,b` in Visual mode exec git blame with selected text
+
+`,w` shortcut for Ctrl+w w for jumpping to next split
+
+`,n` создать новый документ с введенным вами именем в той же директории, что и текущий открытый документ
+
 `,bl` show buffers
 
 `,bp` prev buffer
@@ -67,6 +73,8 @@ Create new empty split:
 `p` or `P` paste in autoindent
 
 `K` append the string from the cursor to begin the next line
+
+`Q` то же самое что и q. Пригодится для случаев :q :Q
 
 {action} from cursor to end of the line:
 
@@ -93,7 +101,9 @@ Move lines:
 
 `:w!!` saves the file as if you opened it with sudo
 
-`Ctrl+a` and `Ctrl+e` in command mode allow to jump at start and end of line
+`Ctrl+a` and `Ctrl+e` in command mode and insert mode allow to jump at start and end of line
+
+`Ctrl+s` fast save
 
 
 Горячие кнопки
@@ -122,6 +132,12 @@ Move lines:
 строки, кроме \s в начале и в конце. Полезно для захвата конструкций и
 дальнейшую их вклейку в другие обертки.
 
+`,b` в Visual mode вызывает git blame для выделенного текста
+
+`,w` сокращение для Ctrl+w w для перепрыгивания в следующий сплит
+
+`,n` edit another file in the same directory as the current file uses expression to extract path from current file's path
+
 `,bl` показывает список буферов и ожидает ввода номера буфера для его открытия
 
 `,bp` предыдущий буфер
@@ -138,6 +154,8 @@ Move lines:
 `p` или `P` Вставить текст и отформатировать правильные отступы в зависимости от контекста
 
 `K` перенести часть строки начиная с курсора в начало следующей строки (split/join)
+
+`Q` Bind :Q to :q
 
 {действие} от курсора до конца строки:
 
@@ -164,6 +182,8 @@ Move lines:
 
 `:w!!` сохраняет файл как если бы вы открыли его с sudo
 
-`Ctrl+a` и `Ctrl+e` в коммандном режиме позволяет переставлять курсор в начало и
+`Ctrl+a` и `Ctrl+e` в Command и Intert режимах позволяет переставлять курсор в начало и
 в конец строки, как так же как это можно делать в терминале.
+
+`Ctrl+s` быстрое сохранение
 

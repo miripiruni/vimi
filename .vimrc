@@ -490,8 +490,30 @@
 
     " В коммандном режиме разрешить прыгать в конец и начало строки,
     " как в консоли
-        cnoremap <c-a> <home>
         cnoremap <c-e> <end>
+        imap     <c-e> <c-o>$
+        cnoremap <c-a> <home>
+        imap     <c-a> <c-o>^
+
+    " ,b
+        vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
+
+    " ,w
+        map <Leader>w <C-w>w
+
+    " Ctrl+s
+        map <C-s> <esc>:w<CR>
+        imap <C-s> <esc>:w<CR>
+
+    " ,n
+        " Edit another file in the same directory as the current file uses expression to extract path from current file's path
+        map <Leader>n :vnew <C-R>=expand("%:p:h") . '/'<CR>
+
+    " Bind :Q to :q
+        command! Q q
+
+
+
 
 
 " Environment

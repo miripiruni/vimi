@@ -103,6 +103,8 @@ Move lines:
 
 `Ctrl+a` and `Ctrl+e` in command mode and insert mode allow to jump at start and end of line
 
+`Ctrl` + `h` or `j` or `k` or `l` to switch between splits
+
 `Ctrl+s` fast save
 
 
@@ -182,8 +184,9 @@ Move lines:
 
 `:w!!` сохраняет файл как если бы вы открыли его с sudo
 
-`Ctrl+a` и `Ctrl+e` в Command и Insert режимах позволяет переставлять курсор в начало и
-в конец строки, как так же как это можно делать в терминале.
+`Ctrl+a` и `Ctrl+e` в Command и Insert режимах позволяет переставлять курсор в начало и в конец строки, как так же как это можно делать в терминале.
+
+`Ctrl` + `h` или `j` или `k` или `l` для переключения между сплитами
 
 `Ctrl+s` быстрое сохранение
 

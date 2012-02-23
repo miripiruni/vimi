@@ -401,6 +401,12 @@
         imap <C-k> <C-o>k
         imap <C-l> <C-o>l
 
+    " Переключение по сплитам
+        nmap <C-h> <C-W>h
+        nmap <C-j> <C-W>j
+        nmap <C-k> <C-W>k
+        nmap <C-l> <C-W>l
+
     " ,v
         " Pressing ,v opens the .vimrc in a new tab
         nmap <leader>v :tabedit $MYVIMRC<CR>
@@ -517,9 +523,6 @@
         inoremap {<CR> {<CR>}<Esc>O
         inoremap (<CR> (<CR>)<Esc>O
         inoremap [<CR> [<CR>]<Esc>O
-
-
-
 
 
 " Environment

@@ -524,6 +524,10 @@
         inoremap (<CR> (<CR>)<Esc>O
         inoremap [<CR> [<CR>]<Esc>O
 
+    " Fold with space
+        nnoremap <CR> za
+        vnoremap <CR> zf
+
 
 " Environment
     set history=1000 " store lots of :cmdline history

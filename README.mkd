@@ -21,13 +21,13 @@ How to install Vimi
 1. Clone Vimi:
 
 ```
-user@~$ git clone git://github.com/miripiruni/vimi.git ~./vimi && cd ~/.vimi
+$ git clone git://github.com/miripiruni/vimi.git ~./vimi && cd ~/.vimi
 ```
 
 2. Run make
 
 ```
-user@~$ make
+$ make
 ```
 
 

@@ -8,7 +8,7 @@ VIMI_DIR = ~/.vimi
 VIMRC = .vimrc
 VUNDLE_DIR = bundle/vundle
 
-vimi: echostart backup symlinks vundle bundle-install
+vimi: echostart backup bundle-install
 	@echo "\nVimi successfully installed.\nRun Vim and write something awesome."
 
 echostart:

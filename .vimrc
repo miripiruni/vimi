@@ -583,6 +583,17 @@
 
 
 
+" File specific
+    autocmd BufNewFile *.py 0r ~/.vimi/templates/template.py
+    autocmd BufNewFile *.xml 0r ~/.vimi/templates/template.xml
+    autocmd BufNewFile *.xsl 0r ~/.vimi/templates/template.xsl
+    autocmd BufNewFile *.jade 0r ~/.vimi/templates/template.jade
+    autocmd BufNewFile *.html 0r ~/.vimi/templates/template.html
+
+    autocmd FileType jade setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+
+
+
 " Плагины
 
     " Solarized

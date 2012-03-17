@@ -21,7 +21,7 @@ How to install Vimi
 Just copy to your console:
 
 ```
-$ git clone git://github.com/miripiruni/vimi.git ~./vimi && cd ~/.vimi && make
+$ git clone git://github.com/miripiruni/vimi.git ~/.vimi && cd ~/.vimi && make
 ```
 
 
@@ -110,6 +110,9 @@ Move lines:
 
 Горячие кнопки
 --------
+
+![CheatSheet](http://miripiruni.org/i/vimi-cheat-sheet-2012-02-18.png)
+
 
 Я придерживаюсь принципиального правила ничего не мапить на F-клавиши. Во-первых, у меня
 на маке они заняты, во-вторых, они слишком далеко. Все мапы в основном через `<Leader>`, который по обыкновению кнопка `,`.

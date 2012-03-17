@@ -48,6 +48,7 @@
         "Bundle 'git://github.com/chrismetcalf/vim-yankring.git'
         "Bundle 'git://github.com/slack/vim-fuzzyfinder.git'
         Bundle 'git://github.com/vim-scripts/vimwiki.git'
+        Bundle 'git://github.com/scrooloose/syntastic.git'
     " Lua
         "Bundle 'git://github.com/vim-scripts/lua.vim.git'
         "Bundle 'git://github.com/rkowal/Lua-Omni-Vim-Completion.git'
@@ -83,6 +84,8 @@
         "Bundle 'git://github.com/vim-ruby/vim-ruby.git'
         "Bundle 'git://github.com/tpope/vim-rails.git'
         "Bundle 'git://github.com/tpope/vim-endwise.git'
+    " Jade
+        Bundle 'git://github.com/digitaltoad/vim-jade.git'
 
     filetype plugin indent on     " required!
     " Brief help

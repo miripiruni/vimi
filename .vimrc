@@ -86,6 +86,8 @@
         "Bundle 'git://github.com/tpope/vim-endwise.git'
     " Jade
         Bundle 'git://github.com/digitaltoad/vim-jade.git'
+    " Stylus
+        Bundle 'git://github.com/wavded/vim-stylus.git'
 
     filetype plugin indent on     " required!
     " Brief help

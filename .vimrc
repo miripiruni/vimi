@@ -529,10 +529,6 @@
         inoremap (<CR> (<CR>)<Esc>O
         inoremap [<CR> [<CR>]<Esc>O
 
-    " Fold with space
-        nnoremap <CR> za
-        vnoremap <CR> zf
-
     " Переключение вкладки по табу
         nmap <Tab> gt
         nmap <S-Tab> gT

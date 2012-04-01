@@ -353,7 +353,7 @@
             echo "Show no line numbers"
           endif
         endfunction
-        map <Leader>n :call ToogleRelativeNumber()<cr>
+        map <Leader>nm :call ToogleRelativeNumber()<cr>
 
     " ,g
         function! ToggleGUINoise()
@@ -532,6 +532,13 @@
     " Fold with space
         nnoremap <CR> za
         vnoremap <CR> zf
+
+    " Переключение вкладки по табу
+        nmap <Tab> gt
+        nmap <S-Tab> gT
+
+    " Ремапим русские символы
+        set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 
 
 " Environment

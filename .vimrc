@@ -263,7 +263,7 @@
         set foldtext=MyFoldText()
 
         set foldcolumn=0        " Ширина строки где располагается фолдинг
-        set foldmethod=indent   " Фолдинг по отступам
+        set foldmethod=manual   " Фолдинг по отступам
         set foldnestmax=10      " Глубина фолдинга 10 уровней
         set nofoldenable        " Не фолдить по умолчанию
         set foldlevel=1         " This is just what i use

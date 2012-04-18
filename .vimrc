@@ -530,8 +530,8 @@
         inoremap [<CR> [<CR>]<Esc>O
 
     " Fold with space
-        nnoremap <CR> za
-        vnoremap <CR> zf
+        "nnoremap <CR> za
+        "vnoremap <CR> zf
 
 
 " Environment

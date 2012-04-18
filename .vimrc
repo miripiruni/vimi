@@ -32,9 +32,9 @@
         Bundle 'git://github.com/vim-scripts/IndexedSearch.git'
         "Bundle 'git://github.com/rphillips/vim-zoomwin.git'
         Bundle 'git://github.com/mattn/zencoding-vim.git'
-        "Bundle 'git://github.com/vim-scripts/UltiSnips.git'
-        Bundle 'git://github.com/msanders/snipmate.vim.git'
-        Bundle 'git://github.com/miripiruni/vimi-snippets.git'
+        Bundle 'git://github.com/vim-scripts/UltiSnips.git'
+        "Bundle 'git://github.com/msanders/snipmate.vim.git'
+        "Bundle 'git://github.com/miripiruni/vimi-snippets.git'
         Bundle 'git://github.com/mileszs/ack.vim.git'
         Bundle 'git://github.com/scrooloose/nerdcommenter.git'
         "Bundle 'git://github.com/tpope/vim-surround.git'
@@ -353,7 +353,7 @@
             echo "Show no line numbers"
           endif
         endfunction
-        map <Leader>n :call ToogleRelativeNumber()<cr>
+        map <Leader>nm :call ToogleRelativeNumber()<cr>
 
     " ,g
         function! ToggleGUINoise()
@@ -532,6 +532,13 @@
     " Fold with space
         "nnoremap <CR> za
         "vnoremap <CR> zf
+
+    " Переключение вкладки по табу
+        nmap <Tab> gt
+        nmap <S-Tab> gT
+
+    " Ремапим русские символы
+        " set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 
 
 " Environment

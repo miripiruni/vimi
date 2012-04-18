@@ -547,8 +547,10 @@
         set backspace=indent,eol,start
 
     " Backup и swp файлы
-        set backupdir=~/.vimi/bac//,/tmp " Директория для backup файлов
-        set directory=~/.vimi/swp//,/tmp " Директория для swp файлов
+        set nobackup " Отключаем создание бэкапов
+        set noswapfile " Отключаем создание swap файлов
+        "set backupdir=~/.vimi/bac//,/tmp " Директория для backup файлов
+        "set directory=~/.vimi/swp//,/tmp " Директория для swp файлов
 
     " Загрузка предыдущей сессии
         set viminfo='10,\"100,:20,%,n~/.viminfo

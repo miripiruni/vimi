@@ -79,7 +79,6 @@
         "Bundle 'git://github.com/fs111/pydoc.vim.git'
     " Perl
         Bundle 'git://github.com/petdance/vim-perl.git'
-        Bundle 'git://github.com/ggray/vim-tt2.git'
     " Ruby/Rails
         "Bundle 'git://github.com/vim-ruby/vim-ruby.git'
         "Bundle 'git://github.com/tpope/vim-rails.git'

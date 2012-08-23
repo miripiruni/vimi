@@ -70,6 +70,7 @@
         Bundle 'git://github.com/pangloss/vim-javascript.git'
         Bundle 'git://github.com/itspriddle/vim-jquery.git'
         Bundle 'git://github.com/kchmck/vim-coffee-script.git'
+        Bundle 'git://github.com/walm/jshint.vim.git'
     " JSON
         Bundle 'git://github.com/leshill/vim-json.git'
     " PHP
@@ -79,7 +80,6 @@
         "Bundle 'git://github.com/fs111/pydoc.vim.git'
     " Perl
         Bundle 'git://github.com/petdance/vim-perl.git'
-        Bundle 'git://github.com/ggray/vim-tt2.git'
     " Ruby/Rails
         "Bundle 'git://github.com/vim-ruby/vim-ruby.git'
         "Bundle 'git://github.com/tpope/vim-rails.git'

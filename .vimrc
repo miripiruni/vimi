@@ -374,6 +374,7 @@
 
     " ,s
         nnoremap <leader>s :%s//<left>
+        vnoremap <leader>s :s//<left>
 
     " Перемещение строк
         " переместить одну строку

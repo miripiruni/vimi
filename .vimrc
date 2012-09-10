@@ -167,6 +167,9 @@
         set visualbell " Use visual bell instead of beeping
         set t_vb=
 
+    " http://www.allaboutvim.ru/2012/03/blog-post.html
+        set path=.,,**
+
     " Символ табуляции и конца строки
         if has('multi_byte')
             if version >= 700

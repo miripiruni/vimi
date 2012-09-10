@@ -49,6 +49,7 @@
         "Bundle 'git://github.com/slack/vim-fuzzyfinder.git'
         Bundle 'git://github.com/vim-scripts/vimwiki.git'
         Bundle 'git://github.com/scrooloose/syntastic.git'
+        Bundle 'git://github.com/vim-scripts/TaskList.vim.git'
     " Lua
         "Bundle 'git://github.com/vim-scripts/lua.vim.git'
         "Bundle 'git://github.com/rkowal/Lua-Omni-Vim-Completion.git'

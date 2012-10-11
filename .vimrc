@@ -614,7 +614,8 @@
 
     " Solarized
         syntax enable
-        let g:solarized_termcolors=256
+        " http://stackoverflow.com/questions/7278267/incorrect-colors-with-vim-in-iterm2-using-solarized#comment11144700_7278548
+        let g:solarized_termcolors=16
         set background=dark
         try
             colorscheme solarized

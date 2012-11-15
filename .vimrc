@@ -522,7 +522,7 @@ set nocompatible
         noremap k gk
 
     " gf
-        " Open file inder cursor in a new vertical split
+        " Open file under cursor in a new vertical split
         nmap gf :vertical wincmd f<CR>
 
     " Create a new window relative to the current one

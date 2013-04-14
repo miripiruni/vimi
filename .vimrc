@@ -28,6 +28,7 @@ set nocompatible
         " For FuzzyFinder:
         " Bundle 'L9'
     " Interface
+        Bundle 'git://github.com/kien/ctrlp.vim.git'
         " Solarized Colorscheme
         Bundle 'git://github.com/altercation/vim-colors-solarized.git'
         " A tree explorer plugin
@@ -338,7 +339,7 @@ set nocompatible
     set foldlevel=1
     " Remove the extrafills --------
     " Only available when compiled with the +windows and +folding features
-    set fillchars=fold:
+    set fillchars="fold: "
 
 " Search
     " While typing a search command, show pattern matches as it is typed
@@ -484,6 +485,7 @@ set nocompatible
     " ,v
         " Open the .vimrc in a new tab
         nmap <leader>v :tabedit $MYVIMRC<CR>
+        :cabbrev e NERDTreeClose<CR>:e!
 
     " <Space> = <PageDown>
         nmap <Space> <PageDown>
@@ -628,8 +630,8 @@ set nocompatible
 
     " Load previous session
         " Only available when compiled with the +viminfo feature
-        set viminfo=10,\"100,:20,%,n~/.viminfo
-        " Set cursor to its last position 
+        set viminfo='10,\"100,:20,%,n~/.viminfo
+        " Set cursor to its last position
         au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
     " AutoReload .vimrc

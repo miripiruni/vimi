@@ -22,6 +22,7 @@
         " For FuzzyFinder:
         "Bundle 'L9'
     " Interface
+        Bundle 'git://github.com/kien/ctrlp.vim.git'
         Bundle 'git://github.com/altercation/vim-colors-solarized.git'
         Bundle 'git://github.com/scrooloose/nerdtree.git'
         Bundle 'git://github.com/ervandew/supertab.git'
@@ -420,6 +421,7 @@
     " ,v
         " Pressing ,v opens the .vimrc in a new tab
         nmap <leader>v :tabedit $MYVIMRC<CR>
+        :cabbrev e NERDTreeClose<CR>:e!
 
     " <Space> = <PageDown> Как в браузерах
         nmap <Space> <PageDown>

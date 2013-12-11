@@ -130,6 +130,8 @@ set nocompatible
     " Character encodings considered when starting to edit an existing file
     " Only available when compiled with the +multi_byte feature
     set fileencodings=utf-8,cp1251
+    " Always add lf in the end of file
+    set fileformat=unix
     " Enhance command-line completion
     " Only available when compiled with the +wildmenu feature
     set wildmenu

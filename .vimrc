@@ -545,7 +545,7 @@ set nocompatible
 
     " <Space><Space>
         " Double space to ". "
-        imap <Space><Space> . 
+        " imap <Space><Space> . 
 
     " ,ts
         " Fix trailing white space

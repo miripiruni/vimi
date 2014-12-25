@@ -44,7 +44,7 @@ set nocompatible
         " Shows 'Nth match out of M' at every search
         Bundle 'git://github.com/vim-scripts/IndexedSearch.git'
         " Bundle 'git://github.com/rphillips/vim-zoomwin.git'
-        Bundle 'git://github.com/mattn/zencoding-vim.git'
+        Bundle 'git://github.com/mattn/emmet-vim.git'
         " TextMate-like snippets
         Bundle 'git://github.com/vim-scripts/UltiSnips.git'
         " TextMate-like snippets

@@ -705,20 +705,6 @@ set nocompatible
         let NERDTreeDirArrows=1
         let NERDTreeBookmarksFile= $HOME . '/.vim/.NERDTreeBookmarks'
 
-    " Zen Coding
-        let g:user_zen_settings = {
-          \  'php' : {
-          \    'extends' : 'html',
-          \    'filters' : 'c',
-          \  },
-          \  'xml' : {
-          \    'extends' : 'html',
-          \  },
-          \  'haml' : {
-          \    'extends' : 'html',
-          \  },
-          \}
-
     " UltiSnips
         let g:UltiSnipsExpandTrigger="<tab>"
         let g:UltiSnipsJumpForwardTrigger="<tab>"

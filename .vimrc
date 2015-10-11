@@ -71,6 +71,10 @@ set nocompatible
         Bundle 'git://github.com/vim-scripts/vimwiki.git'
         Bundle 'git://github.com/scrooloose/syntastic.git'
         Bundle 'git://github.com/vim-scripts/TaskList.vim.git'
+        " You need to install webapi-vim for gist-vim
+        " Also you need to do `git config --global github.user <username>`
+        Bundle 'mattn/webapi-vim'
+        Bundle 'mattn/gist-vim'
     " Lua
         " Bundle 'git://github.com/vim-scripts/lua.vim.git'
         " Bundle 'git://github.com/rkowal/Lua-Omni-Vim-Completion.git'

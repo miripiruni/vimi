@@ -124,6 +124,8 @@ set nocompatible
         Bundle 'git://github.com/digitaltoad/vim-jade.git'
     " Stylus
         Bundle 'git://github.com/wavded/vim-stylus.git'
+    " Go
+        Bundle 'git://github.com/fatih/vim-go.git'
 
     filetype plugin indent on     " required!
 

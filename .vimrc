@@ -44,9 +44,9 @@ set nocompatible
         " Shows 'Nth match out of M' at every search
         Bundle 'git://github.com/vim-scripts/IndexedSearch.git'
         " Bundle 'git://github.com/rphillips/vim-zoomwin.git'
-        Bundle 'git://github.com/mattn/emmet-vim.git'
+        " Bundle 'git://github.com/mattn/emmet-vim.git'
         " TextMate-like snippets
-        Bundle 'git://github.com/vim-scripts/UltiSnips.git'
+        " Bundle 'git://github.com/vim-scripts/UltiSnips.git'
         " TextMate-like snippets
         " Bundle 'git://github.com/msanders/snipmate.vim.git'
         " Miripiruni's XSLT & CSS snippets
@@ -86,7 +86,7 @@ set nocompatible
         Bundle 'git://github.com/hokaccha/vim-html5validator.git'
         " Bundle 'git://github.com/tyru/operator-html-escape.vim.git'
         " Runtime files for Haml and Sass
-        Bundle 'git://github.com/tpope/vim-haml.git'
+        " Bundle 'git://github.com/tpope/vim-haml.git'
         Bundle 'git://github.com/gregsexton/MatchTag.git'
     " CSS/LESS
         " CSS3 syntax support
@@ -95,26 +95,26 @@ set nocompatible
         Bundle 'git://github.com/ap/vim-css-color.git'
         Bundle 'git://github.com/groenewege/vim-less.git'
         Bundle 'git://github.com/miripiruni/vim-better-css-indent.git'
-        Bundle 'git://github.com/miripiruni/CSScomb-for-Vim.git'
+        " Bundle 'git://github.com/miripiruni/CSScomb-for-Vim.git'
     " TypeScript
         Bundle 'git://github.com/leafgarland/typescript-vim.git'
     " JavaScript
         " Vastly improved vim's javascript indentation
         Bundle 'git://github.com/pangloss/vim-javascript.git'
         " Syntax for jQuery keywords and css selectors
-        Bundle 'git://github.com/itspriddle/vim-jquery.git'
+        " Bundle 'git://github.com/itspriddle/vim-jquery.git'
         " CoffeeScript support
-        Bundle 'git://github.com/kchmck/vim-coffee-script.git'
+        " Bundle 'git://github.com/kchmck/vim-coffee-script.git'
         Bundle 'git://github.com/walm/jshint.vim.git'
     " JSON
         Bundle 'git://github.com/leshill/vim-json.git'
     " PHP
-        Bundle 'git://github.com/vim-scripts/php.vim--Garvin.git'
-        Bundle 'git://github.com/2072/PHP-Indenting-for-VIm.git'
+        " Bundle 'git://github.com/vim-scripts/php.vim--Garvin.git'
+        " Bundle 'git://github.com/2072/PHP-Indenting-for-VIm.git'
     " Python/Django
         "Bundle 'git://github.com/fs111/pydoc.vim.git'
     " Perl
-        Bundle 'git://github.com/petdance/vim-perl.git'
+        " Bundle 'git://github.com/petdance/vim-perl.git'
     " Ruby/Rails
         " Editing and compiling Ruby
         " Bundle 'git://github.com/vim-ruby/vim-ruby.git'
@@ -125,7 +125,7 @@ set nocompatible
     " Jade
         Bundle 'git://github.com/digitaltoad/vim-jade.git'
     " Stylus
-        Bundle 'git://github.com/wavded/vim-stylus.git'
+        " Bundle 'git://github.com/wavded/vim-stylus.git'
     " Go
         Bundle 'git://github.com/fatih/vim-go.git'
 

@@ -96,6 +96,8 @@ set nocompatible
         Bundle 'git://github.com/groenewege/vim-less.git'
         Bundle 'git://github.com/miripiruni/vim-better-css-indent.git'
         Bundle 'git://github.com/miripiruni/CSScomb-for-Vim.git'
+    " TypeScript
+        Bundle 'git://github.com/leafgarland/typescript-vim.git'
     " JavaScript
         " Vastly improved vim's javascript indentation
         Bundle 'git://github.com/pangloss/vim-javascript.git'

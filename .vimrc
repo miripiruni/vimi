@@ -28,6 +28,7 @@ set nocompatible
         " For FuzzyFinder:
         " Bundle 'L9'
     " Interface
+        Bundle 'git://github.com/metakirby5/codi.vim.git'
         Bundle 'git://github.com/kien/ctrlp.vim.git'
         " Solarized Colorscheme
         Bundle 'git://github.com/altercation/vim-colors-solarized.git'

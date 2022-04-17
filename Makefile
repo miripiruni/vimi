@@ -43,5 +43,5 @@ vundle:
 	rm -rf $(VIMI_DIR)/$(DOT_VIM)/$(VUNDLE_DIR)
 
 	@echo "Clone Vundle from github.com..."
-	@git clone git://github.com/gmarik/vundle.git $(VIMI_DIR)/$(DOT_VIM)/$(VUNDLE_DIR) > /dev/null
+	@git clone https://github.com/VundleVim/Vundle.vim.git $(VIMI_DIR)/$(DOT_VIM)/$(VUNDLE_DIR) > /dev/null
 	@echo "Done.\n"

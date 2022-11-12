@@ -32,7 +32,7 @@ set nocompatible
         " Bundle 'https://github.com/ctrlpvim/ctrlp.vim.git'
         " Solarized Colorscheme
         Bundle 'https://github.com/altercation/vim-colors-solarized.git'
-        Bundle 'https://github.com/gorodinskiy/vim-coloresque.git'
+        " Bundle 'https://github.com/gorodinskiy/vim-coloresque.git'
         " A tree explorer plugin
         Bundle 'https://github.com/scrooloose/nerdtree.git'
         " Perform all your vim insert mode completions with Tab

@@ -64,31 +64,10 @@ set nocompatible
     " JavaScript
         " Vastly improved vim's javascript indentation
         Bundle 'https://github.com/pangloss/vim-javascript.git'
-        " Syntax for jQuery keywords and css selectors
-        " Bundle 'https://github.com/itspriddle/vim-jquery.git'
-        " CoffeeScript support
-        " Bundle 'https://github.com/kchmck/vim-coffee-script.git'
-        Bundle 'https://github.com/walm/jshint.vim.git'
     " JSON
         Bundle 'https://github.com/leshill/vim-json.git'
-    " PHP
-        " Bundle 'https://github.com/vim-scripts/php.vim--Garvin.git'
-        " Bundle 'https://github.com/2072/PHP-Indenting-for-VIm.git'
-    " Python/Django
-        "Bundle 'https://github.com/fs111/pydoc.vim.git'
-    " Perl
-        " Bundle 'https://github.com/petdance/vim-perl.git'
-    " Ruby/Rails
-        " Editing and compiling Ruby
-        " Bundle 'https://github.com/vim-ruby/vim-ruby.git'
-        " Rails support
-        " Bundle 'https://github.com/tpope/vim-rails.git'
-        " Wisely add "end" in ruby, endfunction/endif/more
-        " Bundle 'https://github.com/tpope/vim-endwise.git'
-    " Jade
-        Bundle 'https://github.com/digitaltoad/vim-jade.git'
-    " Stylus
-        " Bundle 'https://github.com/wavded/vim-stylus.git'
+    " Pug
+        Bundle 'https://github.com/digitaltoad/vim-pug.git'
     " Go
         Bundle 'https://github.com/fatih/vim-go.git'
 
@@ -330,7 +309,7 @@ set nocompatible
     set gdefault
 
 
-" Шорткаты
+" Key bindings
     let mapleader = ","
 
     " ,m
@@ -539,8 +518,8 @@ set nocompatible
         nnoremap <Leader>u gUiw
         inoremap <Leader>u <esc>gUiwea
 
-    " В коммандном режиме разрешить прыгать в конец и начало строки,
-    " как в консоли
+    " In command mode allow to jump to begin/end line
+    " just like in terminal
         cnoremap <c-e> <end>
         inoremap     <c-e> <c-o>$
         cnoremap <c-a> <home>
@@ -676,10 +655,5 @@ set nocompatible
         let NERDTreeDirArrows=1
         let NERDTreeBookmarksFile= $HOME . '/.vim/.NERDTreeBookmarks'
 
-    " UltiSnips
-        let g:UltiSnipsExpandTrigger="<tab>"
-        let g:UltiSnipsJumpForwardTrigger="<tab>"
-        let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
     " VimWiki
-        let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
+        let g:vimwiki_list = [{'path': '~/Yandex.Dist.localized/vimwiki/'}]

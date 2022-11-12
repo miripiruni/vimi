@@ -56,34 +56,11 @@ set nocompatible
         " Bundle 'https://github.com/chrismetcalf/vim-yankring.git'
         " Bundle 'https://github.com/slack/vim-fuzzyfinder.git'
         Bundle 'https://github.com/vim-scripts/vimwiki.git'
-        Bundle 'https://github.com/scrooloose/syntastic.git'
-        Bundle 'https://github.com/vim-scripts/TaskList.vim.git'
-        " You need to install webapi-vim for gist-vim
-        " Also you need to do `git config --global github.user <username>`
-        Bundle 'mattn/webapi-vim'
-        Bundle 'mattn/gist-vim'
-    " Lua
-        " Bundle 'https://github.com/vim-scripts/lua.vim.git'
-        " Bundle 'https://github.com/rkowal/Lua-Omni-Vim-Completion.git'
-        " Bundle 'https://github.com/xolox/vim-lua-ftplugin.git'
-        " Bundle 'https://github.com/xolox/vim-lua-inspect.git'
-    " HTML/HAML
-        " HTML5 omnicomplete and syntax
-        Bundle 'https://github.com/othree/html5.vim.git'
-        " Bundle 'https://github.com/tyru/operator-html-escape.vim.git'
-        " Runtime files for Haml and Sass
-        " Bundle 'https://github.com/tpope/vim-haml.git'
-        Bundle 'https://github.com/gregsexton/MatchTag.git'
-    " CSS/LESS
-        " CSS3 syntax support
-        Bundle 'https://github.com/hail2u/vim-css3-syntax.git'
-        " Highlight colors in css files
-        Bundle 'https://github.com/ap/vim-css-color.git'
-        Bundle 'https://github.com/groenewege/vim-less.git'
-        Bundle 'https://github.com/miripiruni/vim-better-css-indent.git'
-        " Bundle 'https://github.com/miripiruni/CSScomb-for-Vim.git'
+        " You need to do `git config --global github.user <username>`
+        Bundle 'https://github.com/mattn/gist-vim.git'
     " TypeScript
         Bundle 'https://github.com/leafgarland/typescript-vim.git'
+        Bundle 'https://github.com/Quramy/tsuquyomi.git'
     " JavaScript
         " Vastly improved vim's javascript indentation
         Bundle 'https://github.com/pangloss/vim-javascript.git'

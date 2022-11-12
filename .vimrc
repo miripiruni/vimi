@@ -34,39 +34,25 @@ set nocompatible
         Bundle 'https://github.com/altercation/vim-colors-solarized.git'
         " Bundle 'https://github.com/gorodinskiy/vim-coloresque.git'
         " A tree explorer plugin
-        Bundle 'https://github.com/scrooloose/nerdtree.git'
+        Bundle 'https://github.com/preservim/nerdtree.git'
         " Perform all your vim insert mode completions with Tab
         Bundle 'https://github.com/ervandew/supertab.git'
-        " Command-T
-        " Bundle 'https://github.com/wincent/Command-T.git'
-        " Bundle 'https://github.com/vim-scripts/taglist.vim.git'
-        " Depends: http://ctags.sourceforge.net/
-        " Bundle 'https://github.com/int3/vim-taglist-plus.git'
         " Shows 'Nth match out of M' at every search
         Bundle 'https://github.com/vim-scripts/IndexedSearch.git'
-        " Bundle 'https://github.com/rphillips/vim-zoomwin.git'
-        " Bundle 'https://github.com/mattn/emmet-vim.git'
-        " TextMate-like snippets
-        " Bundle 'https://github.com/vim-scripts/UltiSnips.git'
-        " TextMate-like snippets
-        " Bundle 'https://github.com/msanders/snipmate.vim.git'
-        " Miripiruni's XSLT & CSS snippets
         " Bundle 'https://github.com/miripiruni/vimi-snippets.git'
         " RegExp search
-        Bundle 'https://github.com/mileszs/ack.vim.git'
+        "Bundle 'https://github.com/mileszs/ack.vim.git'
         " Provides easy code commenting
         Bundle 'https://github.com/scrooloose/nerdcommenter.git'
         " Mappings to easily delete, change and add surroundings in pairs
-        " Bundle 'https://github.com/tpope/vim-surround.git'
+         Bundle 'https://github.com/tpope/vim-surround.git'
         " Git wrapper
         " Bundle 'https://github.com/tpope/vim-fugitive.git'
-        " Bundle 'https://github.com/tsaleh/vim-align.git'
-        " Bundle 'https://github.com/vim-scripts/bufexplorer.zip.git'
+         Bundle 'https://github.com/vim-scripts/bufexplorer.zip.git'
         " Automatic closing of quotes, parenthesis, brackets, etc.
         " Bundle 'https://github.com/vim-scripts/delimitMate.vim.git'
-        " Bundle 'https://github.com/sjl/gundo.vim.git'
-        " Bundle 'https://github.com/edsono/vim-matchit.git'
-        Bundle 'https://github.com/sjl/threesome.vim.git'
+         Bundle 'https://github.com/sjl/gundo.vim.git'
+        " Bundle 'https://github.com/sjl/threesome.vim.git'
         " Bundle 'https://github.com/chrismetcalf/vim-yankring.git'
         " Bundle 'https://github.com/slack/vim-fuzzyfinder.git'
         Bundle 'https://github.com/vim-scripts/vimwiki.git'

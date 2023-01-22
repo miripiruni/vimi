@@ -583,7 +583,13 @@ set nocompatible
 
     " Load previous session
         " Only available when compiled with the +viminfo feature
-        set viminfo='10,\"100,:20,%,n~/.viminfo
+        if !has('nvim')
+            set viminfo='10,\"100,:20,%,n~/.viminfo
+        else
+            " Do nothing here to use the neovim default
+            " or do soemething like:
+            " set viminfo+=n~/.shada
+        endif
         " Set cursor to its last position
         au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 

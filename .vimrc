@@ -58,6 +58,7 @@ set nocompatible
         Bundle 'https://github.com/vim-scripts/vimwiki.git'
         " You need to do `git config --global github.user <username>`
         Bundle 'https://github.com/mattn/gist-vim.git'
+        Bundle 'https://github.com/editorconfig/editorconfig-vim.git'
     " TypeScript
         Bundle 'https://github.com/leafgarland/typescript-vim.git'
         Bundle 'https://github.com/Quramy/tsuquyomi.git'

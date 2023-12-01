@@ -8,7 +8,7 @@ vimi: echostart bundle-install
 	@echo "\nVimi successfully installed.\nRun Vim and write something awesome."
 
 echostart:
-	@echo "Start installing Vimi...\n"
+	@echo "Start installing Vimi…\n"
 
 bundle-install: symlinks vundle
 	-vim +BundleInstall +quitall
@@ -42,6 +42,6 @@ vundle:
 	@test ! -e $(VIMI_DIR)/$(DOT_VIM)/$(VUNDLE_DIR) || \
 	rm -rf $(VIMI_DIR)/$(DOT_VIM)/$(VUNDLE_DIR)
 
-	@echo "Clone Vundle from github.com..."
+	@echo "Clone Vundle from github.com…"
 	@git clone https://github.com/VundleVim/Vundle.vim.git $(VIMI_DIR)/$(DOT_VIM)/$(VUNDLE_DIR) > /dev/null
 	@echo "Done.\n"

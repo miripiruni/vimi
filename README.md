@@ -4,19 +4,8 @@ Vim miripiruni's bundle
 
 Please address bugs and your suggestions to [Issues](http://github.com/miripiruni/vimi/issues).
 
-Environment
-------------
 
-Recommend:
-
-* Mac OS X 10.6.8
-* [iTerm2](http://www.iterm2.com/#/section/home)
-* [Solarized](https://github.com/altercation/solarized/blob/master/iterm2-colors-solarized/Solarized%20Dark.itermcolors)
-* [Vim](http://vim.org/)
-
-
-How to install Vimi
---------------
+## How to install Vimi
 
 Just copy to your console:
 
@@ -25,14 +14,13 @@ $ git clone https://github.com/miripiruni/vimi.git ~/.vimi && cd ~/.vimi && make
 ```
 
 
-Screenshot
---------
+## Screenshot
 
 ![vimi](http://miripiruni.org/i/vimi.png "vimi")
 
 
-Shortcuts
---------
+## Shortcuts
+
 I hold the fundamental rule is not to press the F-keys. First, on my mac they are busy, and secondly, they are too far away. All the shortcuts in the main through <Leader>, which as usual button ",".
 
 `,r` replace in all buffers word under cursor
@@ -108,8 +96,7 @@ Move lines:
 `Ctrl+s` fast save
 
 
-Горячие кнопки
---------
+## Горячие кнопки
 
 ![CheatSheet](http://miripiruni.org/i/vimi-cheat-sheet-2012-02-18.png)
 
